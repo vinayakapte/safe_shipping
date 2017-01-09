@@ -1,0 +1,40 @@
+[{
+    "smartOrder": [{
+        "order": {
+            "id": null,
+            "timeStamp": null,
+            "type": null,
+            "departDate": null,
+            "departLocation": null,
+            "arriveDate": null,
+            "arriveLocation": null,
+            "transitLegs": [{
+                "item": ["key","value"]
+            }],
+            "requirements": [{
+                "item": ["key","value"]
+            }]
+        },
+        "smartSupplier": {
+            "id": null,
+            "skey": "0ff042ea-45e6-32e1-915b-81efa58e924e",
+            "name": null
+        },
+        "smartConsumer": {
+            "id": null,
+            "sKey": "0ff042ea-45e6-32e1-915b-81efa58e924e",
+            "name": null
+        },
+        "smartDeliverables": {
+            "id": null,
+            "type": null,
+            "asset": null,
+            "mfg": null,
+            "description": null,
+            "miscellaneous": null
+        },
+        "smartActivity": [{
+            "item": ["key","value"]
+        }]
+    }]
+}]

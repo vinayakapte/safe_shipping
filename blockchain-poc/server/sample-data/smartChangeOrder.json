@@ -1,0 +1,31 @@
+[{
+    "smartChangeOrder": [{
+        "changeorder": {
+            "id": null,
+            "timeStamp": null,
+            "originalOrderId": null,
+            "type": null,
+            "departDate": null,
+            "departLocation": null,
+            "arriveDate": null,
+            "arriveLocation": null,
+            "transitLegs": [{
+                "item": ["key","value"]
+            }],
+            "requirements": [{
+                "item": ["key","value"]
+            }]
+        },
+        "smartDeliverables": {
+            "id": null,
+            "type": null,
+            "asset": null,
+            "mfg": null,
+            "description": null,
+            "miscellaneous": null
+        },
+        "smartActivity": [{
+            "item": ["key","value"]
+        }]
+    }]
+}]

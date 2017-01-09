@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+
+<dom-module id="blankpage-view">
+  <template>
+    <!-- px-view-header title="Blank Page" style="display: block; margin-bottom: 6px;"></px-view-header -->
+ 
+    <blank-card id="myCard">
+      <h3>Account Name: <span><strong>{{user.fullname}}</strong></span></h3>
+      <h3>Role: <span><strong>Consumer</strong></span></h3>
+      <hr />
+      <button on-tap="saveChanges">Save Changes</button>
+    </blank-card>
+
+   </template>
+  <script>
+    Polymer({
+      is: 'blankpage-view',
+      properties: {
+        ready: function() {
+          //console.log('blankpage-view ready()');
+          //getCurrentTime();
+        },
+        user: {
+          type: Object,
+          first: String,
+          last: String,
+          fullname: String,
+          value: function() {
+            return { first: 'John', last: 'Smith', fullname: 'John Smith' };
+          }
+        }
+        
+      },
+      saveChanges: function() {
+        alert("Changes have been saved.");
+        // Display confirmation
+        //this.set('user.manager', 'Jimmy');
+      }
+    });
+  </script>
+</dom-module>

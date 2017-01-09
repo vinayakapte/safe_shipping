@@ -1,0 +1,19 @@
+---
+applications:
+  - name: predix-smart-transport
+    memory: 64M
+    buildpack: nodejs_buildpack
+    command: node server/app.js
+    path: dist
+services:
+  - https://c5f721f6-f8f9-49ba-91c0-9da112c4e7f6.predix-uaa.run.aws-usw02-pr.ice.predix.io
+ # - <your-name>-timeseries-instance
+ # - <your-name>-asset-instance
+env:
+    node_env: cloud
+    uaa_service_label : predix-uaa
+    # Add these values for authentication in the cloud
+    clientId: {dev_client}
+    #base64ClientCredential: dWFhLWNsaWVudC1pZDp1YWEtY2xpZW50LWlkLXNlY3JldA==
+    base64ClientCredential: ZGV2X2NsaWVudDoxZGV2X2NsaWVudDI=
+    #windServiceURL: "{URL of the microservice <your-name>-winddata-timeseries-service}, e.g.  https://your-name-winddata-timeseries-service.run.asw-usw02-pr.predix.io"

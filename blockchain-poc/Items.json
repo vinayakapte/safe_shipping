@@ -1,0 +1,311 @@
+[{
+    "uri": "/assets/0ff042ea-45e6-32e1-915b-81efa58e924e",
+	"name": "Asset 1",
+	"sections": [{
+		"uri": "/assets/67dc7db3-2374-314d-8b19-6be09d4203c9",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1392,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/67dc7db3-2374-314d-8b19-6be09d4203c9"
+		}, {
+			"ultrasonicSensorPositionId": 1428,
+			"sensorPositionName": "MeasurementPosition 2",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/67dc7db3-2374-314d-8b19-6be09d4203c9"
+		}]
+	}, {
+		"uri": "/assets/8d2c61f7-eb3e-3170-9e0b-dc26b2b574f5",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1390,
+			"sensorPositionName": "ultrasonic sensor position 1",
+			"diameter": 22.5,
+			"rotation": 90,
+			"sequenceNumber": null,
+			"sectionId": "/assets/8d2c61f7-eb3e-3170-9e0b-dc26b2b574f5"
+		}, {
+			"ultrasonicSensorPositionId": 1427,
+			"sensorPositionName": "MeasurementPosition 2",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/8d2c61f7-eb3e-3170-9e0b-dc26b2b574f5"
+		}, {
+			"ultrasonicSensorPositionId": 1445,
+			"sensorPositionName": "MeasurementPosition 3",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/8d2c61f7-eb3e-3170-9e0b-dc26b2b574f5"
+		}]
+	}, {
+		"uri": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1257,
+			"sensorPositionName": "MeasurementPosition 3",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1258,
+			"sensorPositionName": "MeasurementPosition 4",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1252,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1253,
+			"sensorPositionName": "MeasurementPosition 2",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1259,
+			"sensorPositionName": "MeasurementPosition 5",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1425,
+			"sensorPositionName": "MeasurementPosition 6",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}, {
+			"ultrasonicSensorPositionId": 1426,
+			"sensorPositionName": "MeasurementPosition 7",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9c5a6390-e617-3bdd-a3f8-9b94f65992c1"
+		}]
+	}, {
+		"uri": "/assets/d070e770-2957-35bc-a13b-1f176f8afff8",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1241,
+			"sensorPositionName": "Position 1",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/d070e770-2957-35bc-a13b-1f176f8afff8"
+		}, {
+			"ultrasonicSensorPositionId": 1393,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/d070e770-2957-35bc-a13b-1f176f8afff8"
+		}, {
+			"ultrasonicSensorPositionId": 1394,
+			"sensorPositionName": "MeasurementPosition 2",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/d070e770-2957-35bc-a13b-1f176f8afff8"
+		}]
+	}, {
+		"uri": "/assets/8f9770bb-0c7b-32f3-8a69-bcfc315dfa3f",
+		"sectionId": null,
+		"name": "Section 2",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1244,
+			"sensorPositionName": null,
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/8f9770bb-0c7b-32f3-8a69-bcfc315dfa3f"
+		}, {
+			"ultrasonicSensorPositionId": 1245,
+			"sensorPositionName": null,
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/8f9770bb-0c7b-32f3-8a69-bcfc315dfa3f"
+		}]
+	}, {
+		"uri": "/assets/9b26b086-2294-3c40-90c7-72846f0a9696",
+		"sectionId": null,
+		"name": "Section 3",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1250,
+			"sensorPositionName": null,
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/9b26b086-2294-3c40-90c7-72846f0a9696"
+		}]
+	}, {
+		"uri": "/assets/04862abb-ccb4-3558-a2c1-15cd8fe365bd",
+		"sectionId": null,
+		"name": "Section 4",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1446,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 12,
+			"rotation": 270,
+			"sequenceNumber": null,
+			"sectionId": "/assets/04862abb-ccb4-3558-a2c1-15cd8fe365bd"
+		}]
+	}, {
+		"uri": "/assets/2c543e88-6d79-3ac8-847f-6808335da134",
+		"sectionId": null,
+		"name": "Section 4",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1248,
+			"sensorPositionName": null,
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/2c543e88-6d79-3ac8-847f-6808335da134"
+		}]
+	}, {
+		"uri": "/assets/9bc09a3c-0506-3ceb-bc35-33ec278d6d1d",
+		"sectionId": null,
+		"name": "Section 5",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/e0c5bd9a-ac1d-3f68-8400-9b1378943e72",
+		"sectionId": null,
+		"name": "Section 5",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/676abd90-33aa-3451-bfd2-33c8bd8d6dcc",
+		"sectionId": null,
+		"name": "section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/a78064d9-a112-3107-8f59-0581c5361030",
+		"sectionId": null,
+		"name": "section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}]
+}, {
+	"uri": "/assets/4afd3544-cea1-363d-ba29-e39831d8930d",
+	"name": "Asset 4",
+	"sections": [{
+		"uri": "/assets/2dc11152-7b85-35d7-8af6-c48ca4397d9f",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1395,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/2dc11152-7b85-35d7-8af6-c48ca4397d9f"
+		}]
+	}]
+}, {
+	"uri": "/assets/392f5661-a5f8-339b-8233-eca8f665b6e5",
+	"name": "Asset 5",
+	"sections": [{
+		"uri": "/assets/0a421cdf-20af-3544-a584-e46f54f5fff7",
+		"sectionId": null,
+		"name": "Section 4",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/96d47d01-67f5-392c-8411-fc15cd1dd164",
+		"sectionId": null,
+		"name": "Section 4",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/c619d855-1ac7-36ab-8c62-f34eafc60088",
+		"sectionId": null,
+		"name": "Section 4",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}, {
+		"uri": "/assets/c93c6e3b-9ac2-306e-aa75-a34470979dfb",
+		"sectionId": null,
+		"name": "Section 5",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": []
+	}]
+}, {
+	"uri": "/assets/36078963-8bbc-3393-b5c1-91489c163f5f",
+	"name": "Checo 1",
+	"sections": [{
+		"uri": "/assets/7c1b25ea-bde2-3dfb-ab98-c82823b16962",
+		"sectionId": null,
+		"name": "Section 1",
+		"ultrasonicSensors": null,
+		"temperatureSensors": null,
+		"ultrasonicSensorPositions": [{
+			"ultrasonicSensorPositionId": 1396,
+			"sensorPositionName": "MeasurementPosition 1",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/7c1b25ea-bde2-3dfb-ab98-c82823b16962"
+		}, {
+			"ultrasonicSensorPositionId": 1397,
+			"sensorPositionName": "MeasurementPosition 2",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/7c1b25ea-bde2-3dfb-ab98-c82823b16962"
+		}, {
+			"ultrasonicSensorPositionId": 1398,
+			"sensorPositionName": "MeasurementPosition 3",
+			"diameter": 0,
+			"rotation": 0,
+			"sequenceNumber": null,
+			"sectionId": "/assets/7c1b25ea-bde2-3dfb-ab98-c82823b16962"
+		}]
+	}]
+}]

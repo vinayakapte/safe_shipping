@@ -7,9 +7,9 @@
     <!-- px-view-header title="Blank Page" style="display: block; margin-bottom: 6px;"></px-view-header -->
  
     <blank-card id="myCard">
+      
       <h3>Account Name: <span><strong>{{user.fullname}}</strong></span></h3>
       <h3>Role: <span><strong>Consumer</strong></span></h3>
-      <hr />
       <button on-tap="saveChanges">Save Changes</button>
     </blank-card>
 
@@ -34,7 +34,6 @@
         
       },
       saveChanges: function() {
-        alert("Changes have been saved.");
         // Display confirmation
         //this.set('user.manager', 'Jimmy');
       }

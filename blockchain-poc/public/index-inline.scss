@@ -12,19 +12,6 @@ $inuit-webfont-path: "/bower_components/px-typography-design/type";
 @import "px-typography-design/_base.typography.scss";
 @import "px-headings-design/_base.headings.scss";
 
-
-@import "px-forms-design/_base.forms.scss";
-@import "px-forms-design/_objects.forms.scss";
-$inuit-enable-inline-fields : true;
-$inuit-enable-text-input--bare : true;
-$inuit-enable-validation-states : true;
-$inuit-enable-input-tiny : true;
-$inuit-enable-input-small : true;
-$inuit-enable-input-regular : true;
-$inuit-enable-input-large : true;
-$inuit-enable-input-huge : true;
-
-
 // Meta
 // Objects
 // Components

@@ -1,44 +1,18 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
 <link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
 
 <dom-module id="blankpage2-view">
   <template>
+    <px-view-header title="Blank Page" style="display: block; margin-bottom: 6px;"></px-view-header>
  
-      <px-card id="order-svc">
-    
-        <h3>Time: <span><strong>{{clock.time}}</strong></span></h3>
-        <div>Enter Content Description, pickup location and delivery destination.</div>
-
-
-        <form>
-          <fieldset class="form-field">
-            <legend>Basic form</legend>
-            <ol class="list-">
-              <li class="form-field">
-                <label for="deliverables" id="deliverableLabel">Deliverable Description:</label>
-                <input type="text" class="text-input" placeholder="Enter Name of Deliverables . . ." id="deliverables" value="{{order.deliverables}}"></input>
-                <span class="form-field__help">This is the title or name of the supplies to be transported</span>
-              </li>
-              <li class="form-field">
-                <label for="departure" id="departureLabel">Departure Location:</label>
-                <input type="text" class="text-input" placeholder="Enter Pickup Departure Address . . ." value="{{order.departure}}"></input><br />
-              </li>
-              <li class="form-field">
-                <label for="destination" id="destinationLabel">Destination Location:</label>
-                <input type="text" class="text-input" placeholder="Enter Destination Delivery Address . . ." value="{{order.destination}}">Destination Location:</input><br />
-              </li>
-              <li class="form-field">
-                <input class="btn btn--primary" type="submit" value="Submit">
-                <input class="btn btn--primary" type="reset" value="Cancel">
-                <input class="btn btn--primary" value="Go" on-tap="changeManager">
-              </li>
-            </ol>     
-          </fieldset>
-        </form>
-
-      </px-card>
+    <blank-card id="myCard">
+      <h3>Time: <span><strong>{{clock.time}}</strong></span></h3>
+      An example of a blank card without any content (except for this brief description).  Replace this with the actual content for your application.
+      <h3>Employee: <span><strong>{{user.name}}</strong></span></h3>
+      <h3>Manager: <span><strong>{{user.manager}}</strong></span></h3>
+      <button on-tap="changeManager">Change Manager</button>
+    </blank-card>
 
    </template>
   <script>
@@ -49,14 +23,10 @@
           //console.log('blankpage-view ready()');
           getCurrentTime();
         },
-        order: {
+        user: {
           type: Object,
           value: function() {
-            return { 
-              deliverables: 'Annual Vaccine', 
-              departure: 'San Fransicsco, CA',
-              destination: 'Chicago, IL'
-            };
+            return { name: 'Rob', manager: 'Paul' };
           }
         },
         clock: {
@@ -66,10 +36,10 @@
             return { time: n };
             //self.async(getCurrentTime(), null, 1000);
           },
-        },
-        changeManager: function() {
-          alert(order.deliverables + ' to be picked up from ' + order.departure + ' and devivered to destination ' + order.destination);
-        },
+        }
+      },
+      changeManager: function() {
+        this.set('user.manager', 'Jimmy');
       }
     });
   </script>

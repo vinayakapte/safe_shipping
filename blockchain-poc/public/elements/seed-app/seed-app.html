@@ -36,7 +36,7 @@
     <div class="viewport">
 
       <div class="content-wrapper">
-        <px-app-nav
+        <px-app-nav style="min-height:100%!important;" 
           class="navbar"
           nav-items="[[navItems]]"
           path-prefix="[[pathPrefix]]">
@@ -62,16 +62,6 @@
             element-href="/elements/views/blankpage-view.html">
           </px-view>
 
-          <!-- /Account route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
-          </app-route>
-          <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
-          </px-view>
           <!-- /Exchange route and view -->
           <app-route
             route="[[_route]]"
@@ -141,7 +131,6 @@
 
       properties: {
 
-
         routesActive: {
           type: Boolean,
           value: false
@@ -165,11 +154,7 @@
             return [{
               "label": "Account",
               "path": "/blankpage",
-              "icon": "fa-user"
-            }
-            ,{
-              "label": "Account2",
-              "path": "/blankpage2",
+<<<<<<< HEAD
               "icon": "fa-user"
             }
             ,{
@@ -181,6 +166,9 @@
               "label": "Transit",
               "path": "/mapdata",
               "icon": "fa-map"
+=======
+              "icon": "fa-file"
+>>>>>>> origin/develop
             }
             ,{
               "label": "History",

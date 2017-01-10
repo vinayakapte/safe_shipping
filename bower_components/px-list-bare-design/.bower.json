@@ -1,0 +1,45 @@
+{
+  "name": "px-list-bare-design",
+  "version": "0.3.1",
+  "authors": [
+    "General Electric",
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A simple object to remove bullets and indents from lists",
+  "main": "_objects.list-bare.scss",
+  "keywords": [
+    "sass",
+    "px",
+    "bare",
+    "lists"
+  ],
+  "homepage": "https://github.com/PredixDev/px-list-bare-design.git",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sass",
+    "scripts",
+    ".github",
+    "gulpfile.js",
+    "OSS_Notice.pdf",
+    "sassdoc.json"
+  ],
+  "dependencies": {
+    "px-defaults-design": "^1.0.2"
+  },
+  "devDependencies": {
+    "px-sass-doc": "^0.3.0",
+    "px-starter-kit-design": "^0.7.0"
+  },
+  "_release": "0.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.1",
+    "commit": "d6b7293a115f19759c5dbd081d959ed9637d6353"
+  },
+  "_source": "https://github.com/predixDev/px-list-bare-design.git",
+  "_target": "^0.3.0",
+  "_originalSource": "px-list-bare-design"
+}

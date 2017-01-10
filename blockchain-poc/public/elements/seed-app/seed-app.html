@@ -154,7 +154,6 @@
             return [{
               "label": "Account",
               "path": "/blankpage",
-<<<<<<< HEAD
               "icon": "fa-user"
             }
             ,{
@@ -166,9 +165,6 @@
               "label": "Transit",
               "path": "/mapdata",
               "icon": "fa-map"
-=======
-              "icon": "fa-file"
->>>>>>> origin/develop
             }
             ,{
               "label": "History",
@@ -222,7 +218,7 @@
         // set default route to /dashboards
         var l = window.location;
         if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
-          l.hash = "/dashboards";
+          l.hash = "/blankpage";
         }
       }
 

@@ -73,6 +73,17 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
+          <!-- /Account route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
           <!-- /Activity route and view -->
           <app-route
             route="[[_route]]"
@@ -160,6 +171,11 @@
               "label": "Exchange",
               "path": "/tabledata",
               "icon": "fa-exchange"
+            }
+            ,{
+              "label": "Contracts",
+              "path": "/blankpage2",
+              "icon": "fa-file-text-o"
             }
             ,{
               "label": "Transit",

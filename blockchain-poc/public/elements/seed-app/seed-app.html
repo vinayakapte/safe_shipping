@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- import polymer -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
@@ -225,3 +226,248 @@
     });
   </script>
 </dom-module>
+=======
+<!-- import polymer -->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!-- import page level css -->
+<link rel="import" href="seed-app-styles.html">
+
+<!-- app route -->
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+
+<!-- px components -->
+<link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
+<link rel="import" href="../../bower_components/px-view/px-view.html">
+
+<link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
+<link rel="import" href="../predix-logo/predix-logo.html">
+<link rel="import" href="../seed-footer/seed-footer.html">
+
+<dom-module id="seed-app">
+  <template>
+
+    <!-- apply imported seed app style module -->
+    <style include="seed-app-styles"></style>
+
+    <header role="banner" class="flex flex--middle">
+      <div class="viewport flex">
+        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> Smart Transport</h3>
+        <div class="flex__item">
+          <div class="flex" style="text-align:right;">
+            <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="viewport">
+
+      <div class="content-wrapper">
+        <px-app-nav style="min-height:100%!important;" 
+          class="navbar"
+          nav-items="[[navItems]]"
+          path-prefix="[[pathPrefix]]">
+        </px-app-nav>
+
+        <main class="u-pt-- u-pr-- u-pl--" role="main">
+
+          <!-- app-location captures url and assigns _route value -->
+          <app-location
+            id="carbonLocation"
+            route="{{_route}}"
+            use-hash-as-path>
+          </app-location>
+
+          <!-- /Account route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage"
+            active="{{_blankpageActive}}">
+          </app-route>
+          <px-view
+            active="[[_blankpageActive]]"
+            element-href="/elements/views/blankpage-view.html">
+          </px-view>
+
+          <!-- /Exchange route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/tabledata"
+            active="{{_tabledataActive}}">
+          </app-route>
+          <px-view
+            active="[[_tabledataActive]]"
+            element-href="/elements/views/tabledata-view.html">
+          </px-view>
+
+          <!-- /Account route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
+          <!-- /Activity route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/mapdata"
+            active="{{_mapdataActive}}">
+          </app-route>
+          <px-view
+            active="[[_mapdataActive]]"
+            element-href="/elements/views/mapdata-view.html">
+          </px-view>
+
+          <!-- /History route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/timeline"
+            active="{{_timelineActive}}">
+          </app-route>
+          <px-view
+            active="[[_timelineActive]]"
+            element-href="/elements/views/timeline-view.html">
+          </px-view>
+
+          <!-- /dashboards route and view>
+          <app-route
+            route="[[_route]]"
+            pattern="/dashboards"
+            active="{{_dashboardsActive}}">
+          </app-route>
+          <px-view
+            active="[[_dashboardsActive]]"
+            element-href="/elements/views/dashboards-view.html">
+          </px-view -->
+
+          <!-- /winddata route and view>
+          <app-route
+            route="[[_route]]"
+            pattern="/winddata"
+            active="{{_winddataActive}}">
+          </app-route>
+          <px-view
+            active="[[_winddataActive]]"
+            element-href="/elements/views/winddata-view.html">
+          </px-view -->
+
+        </main>
+
+      </div>
+    </div>
+
+    <seed-footer footer-links='[[footerLinks]]'></seed-footer>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'seed-app',
+
+      properties: {
+
+        routesActive: {
+          type: Boolean,
+          value: false
+        },
+
+        //Global application object
+        global: {
+          type: Object,
+          value: function() {
+            return {
+              version: '1.0',
+              name: 'Predix UI Seed',
+              session: {}
+            }
+          }
+        },
+
+        navItems: {
+          type: Array,
+          value: function() {
+            return [{
+              "label": "Account",
+              "path": "/blankpage",
+              "icon": "fa-user"
+            }
+            ,{
+              "label": "Contracts",
+              "path": "/blankpage2",
+              "icon": "fa-file-text-o"
+            }
+            ,{
+              "label": "Exchange",
+              "path": "/tabledata",
+              "icon": "fa-exchange"
+            }
+            ,{
+              "label": "Transit",
+              "path": "/mapdata",
+              "icon": "fa-map"
+            }
+            ,{
+              "label": "History",
+              "path": "/timeline",
+              "icon": "fa-list"
+            }
+            ]
+          }
+        },
+
+        footerLinks: {
+          type: Array,
+          value: function() {
+            return [{
+              "label": "Privacy",
+              "href": "#/dashboards",
+              "target": "_blank"
+            }, {
+              "label": "Terms",
+              "href": "#/dashboards",
+              "target": "_blank"
+            }, {
+              "label": "Contact",
+              "href": "#/dashboards",
+              "target": "_blank"
+            }, {
+              "label": "Accessibility",
+              "href": "#/dashboards",
+              "target": "_blank"
+            }, {
+              "label": "Cookies",
+              "href": "#/dashboards",
+              "target": "_blank"
+            }
+          ]
+          }
+        },
+
+        // Sets app default base URL for client-side routing
+        pathPrefix: {
+          type: String,
+          value: '#'
+        }
+      },
+
+      ready: function(){
+        this._checkForDefaultRoute();
+      },
+
+      _checkForDefaultRoute: function() {
+        // set default route to /dashboards
+        var l = window.location;
+        if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
+          l.hash = "/blankpage";
+        }
+      }
+
+    });
+  </script>
+</dom-module>
+>>>>>>> f2e6a62c4a32b8a6c3c2b5ae196a014eb984409e

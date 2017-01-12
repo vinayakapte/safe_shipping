@@ -24,7 +24,7 @@
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> Smart Transport</h3>
+        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SafeShipping</h3>
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
             <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
@@ -162,15 +162,11 @@
         navItems: {
           type: Array,
           value: function() {
-            return [{
+            return [
+            {
               "label": "Account",
               "path": "/blankpage",
               "icon": "fa-user"
-            }
-            ,{
-              "label": "Contracts",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
             }
             ,{
               "label": "Exchange",
@@ -178,14 +174,19 @@
               "icon": "fa-exchange"
             }
             ,{
+              "label": "Timeline",
+              "path": "/timeline",
+              "icon": "fa-list"
+            }
+            ,{
+              "label": "Contracts",
+              "path": "/blankpage2",
+              "icon": "fa-file-text-o"
+            }
+            ,{
               "label": "Transit",
               "path": "/mapdata",
               "icon": "fa-map"
-            }
-            ,{
-              "label": "History",
-              "path": "/timeline",
-              "icon": "fa-list"
             }
             ]
           }
@@ -241,4 +242,3 @@
     });
   </script>
 </dom-module>
->>>>>>> f2e6a62c4a32b8a6c3c2b5ae196a014eb984409e

@@ -13,7 +13,6 @@
 <dom-module id="three-widgets-card">
 
   <template>
-
     <!-- apply imported style module -->
     <style include="three-widgets-card-styles"></style>
     <px-threeup id="widgetsx3" widget-header="Active Contracts" widget-icon="fa-file-text-o">
@@ -21,7 +20,31 @@
         <p class="chart-header u-m0 u-pb++">
           [[_simpleDataValuesB.data.name]]
         </p>
-        <div class="flex center" style="text-align: center">
+        <div class="flex flex--center">
+          <div class="flex">
+            <div class="large-value">Title</div>
+            <div class="flex flex--col u-ml-">
+              <small class="caps">Status</small>
+              <small class="caps muted">active</small>
+            </div>
+          </div>
+          <div class="u-ml+ flex">
+            <div class="large-value">Req</div>
+            <div class="flex flex--col u-ml-">
+              <small class="caps">Require</small>
+              <small class="caps muted">ok</small>
+            </div>
+          </div>
+        </div>
+        <div>
+          <image src="../../resources/lifecycle.png"></image>
+        </div>
+      </div>
+      <div class="widget-2">
+        <p class="chart-header u-m0 u-pb++">
+          [[_simpleDataValuesB.data.name]]
+        </p>
+        <div class="flex flex--center">
           <div class="flex">
             <div class="large-value">987</div>
             <div class="flex flex--col u-ml-">
@@ -41,35 +64,11 @@
           <image src="../../resources/lifecycle.png"></image>
         </div>
       </div>
-      <div class="widget-1">
+      <div class="widget-3">
         <p class="chart-header u-m0 u-pb++">
           [[_simpleDataValuesB.data.name]]
         </p>
-        <div class="flex" style="text-align: center">
-          <div class="flex">
-            <div class="large-value">987</div>
-            <div class="flex flex--col u-ml-">
-              <small class="caps">Output</small>
-              <small class="caps muted">mw</small>
-            </div>
-          </div>
-          <div class="u-ml+ flex">
-            <div class="large-value">1010</div>
-            <div class="flex flex--col u-ml-">
-              <small class="caps">Capacity</small>
-              <small class="caps muted">mw</small>
-            </div>
-          </div>
-        </div>
-        <div>
-          <image src="../../resources/lifecycle.png"></image>
-        </div>
-      </div>
-      <div class="widget-1">
-        <p class="chart-header u-m0 u-pb++">
-          [[_simpleDataValuesB.data.name]]
-        </p>
-        <div class="flex" style="text-align: center">
+        <div class="flex flex--center">
           <div class="flex">
             <div class="large-value">987</div>
             <div class="flex flex--col u-ml-">

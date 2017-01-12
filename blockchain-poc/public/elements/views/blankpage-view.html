@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
 
 <dom-module id="blankpage-view">
@@ -8,10 +9,28 @@
  
     <blank-card id="myCard">
       
+      <select>
+        <option is="dom-repeat" value="{{participants.name}}">{{participants.name}}</option>
+      </select>
+
       <h3>Account Name: <span><strong>{{user.fullname}}</strong></span></h3>
       <h3>Role: <span><strong>Consumer</strong></span></h3>
       <button on-tap="saveChanges">Save Changes</button>
+
     </blank-card>
+
+    <!-- IronAjax used to load participants data from local json file. Later to use service URL -->
+    <iron-ajax
+      id="participantsIronAjax"
+      url="/server/sample-data/persistantTable.json"
+      last-response="{{_decksResponse}}">
+      
+      <!-- 
+        // original
+        auto 
+        url="[[_decksUrl]]""
+      -->
+    </iron-ajax>
 
    </template>
   <script>
@@ -30,13 +49,17 @@
           value: function() {
             return { first: 'John', last: 'Smith', fullname: 'John Smith' };
           }
-        }
+        },
+        
         
       },
       saveChanges: function() {
         // Display confirmation
-        //this.set('user.manager', 'Jimmy');
-      }
+        this.set('user.manager', 'Jimmy');
+      },
+
+
+
     });
   </script>
 </dom-module>

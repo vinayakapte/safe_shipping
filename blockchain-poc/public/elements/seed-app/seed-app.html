@@ -95,7 +95,7 @@
             element-href="/elements/views/mapdata-view.html">
           </px-view>
 
-          <!-- /History route and view -->
+          <!-- /Timeline route and view -->
           <app-route
             route="[[_route]]"
             pattern="/timeline"
@@ -105,6 +105,28 @@
             active="[[_timelineActive]]"
             element-href="/elements/views/timeline-view.html">
           </px-view>
+
+          <!-- /History route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/table"
+            active="{{_tableActive}}">
+          </app-route>
+          <px-view
+            active="[[_tableActive]]"
+            element-href="/elements/views/table-view.html">
+          </px-view>
+
+          <!-- /winddata route and view>
+          <app-route
+            route="[[_route]]"
+            pattern="/winddata"
+            active="{{_winddataActive}}">
+          </app-route>
+          <px-view
+            active="[[_winddataActive]]"
+            element-href="/elements/views/winddata-view.html">
+          </px-view -->
 
           <!-- /dashboards route and view>
           <app-route
@@ -176,6 +198,11 @@
             ,{
               "label": "Timeline",
               "path": "/timeline",
+              "icon": "fa-clock-o"
+            }
+            ,{
+              "label": "Ledger",
+              "path": "/table",
               "icon": "fa-list"
             }
             ,{
@@ -187,6 +214,11 @@
               "label": "Transit",
               "path": "/mapdata",
               "icon": "fa-map"
+            }
+            ,{
+              "label": "Windata",
+              "path": "/winddata",
+              "icon": "fa-line-chart"
             }
             ]
           }

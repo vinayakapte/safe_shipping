@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: predix-SafeShipping
+  - name: predix-smart-transport
     memory: 64M
     buildpack: nodejs_buildpack
     command: node server/app.js

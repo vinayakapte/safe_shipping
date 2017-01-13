@@ -95,7 +95,7 @@
             element-href="/elements/views/mapdata-view.html">
           </px-view>
 
-          <!-- /History route and view -->
+          <!-- /Timeline route and view -->
           <app-route
             route="[[_route]]"
             pattern="/timeline"
@@ -104,6 +104,17 @@
           <px-view
             active="[[_timelineActive]]"
             element-href="/elements/views/timeline-view.html">
+          </px-view>
+
+          <!-- /History route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/table"
+            active="{{_tableActive}}">
+          </app-route>
+          <px-view
+            active="[[_tableActive]]"
+            element-href="/elements/views/table-view.html">
           </px-view>
 
           <!-- /winddata route and view>
@@ -187,6 +198,11 @@
             ,{
               "label": "Timeline",
               "path": "/timeline",
+              "icon": "fa-clock-o"
+            }
+            ,{
+              "label": "Ledger",
+              "path": "/table",
               "icon": "fa-list"
             }
             ,{

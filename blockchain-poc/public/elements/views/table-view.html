@@ -1,14 +1,18 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-card/px-card.html">
 <link rel="import" href="../../elements/table-card/table-card.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../bower_components/px-table-view/px-table-view.html">
 
 <dom-module id="table-view">
   <template>
+    <px-card header-text="Ledger History">
+      <px-table-view id="mytableview">
 
-    <px-table-view id="mytablecard">
 
-    </px-table-view>
 
+      </px-table-view>
+    </px-card>
   </template>
   
   <script>

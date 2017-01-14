@@ -73,28 +73,6 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
-          <!-- /Account route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
-          </app-route>
-          <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
-          </px-view>
-
-          <!-- /Activity route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/mapdata"
-            active="{{_mapdataActive}}">
-          </app-route>
-          <px-view
-            active="[[_mapdataActive]]"
-            element-href="/elements/views/mapdata-view.html">
-          </px-view>
-
           <!-- /Timeline route and view -->
           <app-route
             route="[[_route]]"
@@ -106,7 +84,7 @@
             element-href="/elements/views/timeline-view.html">
           </px-view>
 
-          <!-- /History route and view -->
+          <!-- /Ledger route and view -->
           <app-route
             route="[[_route]]"
             pattern="/table"
@@ -117,8 +95,29 @@
             element-href="/elements/views/table-view.html">
           </px-view>
 
-          <!--
-          //winddata route and view
+          <!-- /Contract route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
+          <!-- /Transit route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/mapdata"
+            active="{{_mapdataActive}}">
+          </app-route>
+          <px-view
+            active="[[_mapdataActive]]"
+            element-href="/elements/views/mapdata-view.html">
+          </px-view>
+
+          <!-- //winddata route and view -->
           <app-route
             route="[[_route]]"
             pattern="/winddata"
@@ -128,7 +127,6 @@
             active="[[_winddataActive]]"
             element-href="/elements/views/winddata-view.html">
           </px-view>
-          -->
 
           <!-- 
           //dashboards route and view
@@ -201,11 +199,6 @@
               "label": "Account",
               "path": "/blankpage",
               "icon": "fa-user"
-            }
-            ,{
-              "label": "Contracts",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
             }
             ,{
               "label": "Exchange",

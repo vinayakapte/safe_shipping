@@ -13,7 +13,7 @@
   </style>
   <template>
     
-    <px-card 
+    <px-card class="layout layout__item-full"
       header-text="Transit Activity">
 
       <google-map map="{{map}}">
@@ -27,7 +27,8 @@
         waypoints="{{waypoints}}">
       </google-map-directions>
 
-      <!--iron-ajax
+      <!--
+      <iron-ajax
         auto 
         url="" 
         params='{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}' 
@@ -35,12 +36,15 @@
         last-response="{{handleIa1Response}}" 
         debounce-duration="300">
       </iron-ajax>
+      -->
 
+      <!--
       <template is="dom-repeat" items="{{response}}">
         <div>
           <a href="{{item.html_url}}">{{item.title}}</a>
         </div>
-      </template -->
+      </template>
+      -->
 
     </px-card>
 

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
 <!-- import polymer -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
@@ -25,7 +28,11 @@
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
+<<<<<<< HEAD
         <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> Smart Transport</h3>
+=======
+        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SafeShipping</h3>
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
             <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
@@ -74,6 +81,7 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
+<<<<<<< HEAD
           <!-- /Activity route and view -->
           <app-route
             route="[[_route]]"
@@ -86,6 +94,9 @@
           </px-view>
 
           <!-- /History route and view -->
+=======
+          <!-- /Timeline route and view -->
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
           <app-route
             route="[[_route]]"
             pattern="/timeline"
@@ -96,6 +107,7 @@
             element-href="/elements/views/timeline-view.html">
           </px-view>
 
+<<<<<<< HEAD
           <!-- /dashboards route and view>
           <app-route
             route="[[_route]]"
@@ -303,6 +315,20 @@
           </px-view>
 
           <!-- /Account route and view -->
+=======
+          <!-- /Ledger route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/table"
+            active="{{_tableActive}}">
+          </app-route>
+          <px-view
+            active="[[_tableActive]]"
+            element-href="/elements/views/table-view.html">
+          </px-view>
+
+          <!-- /Contract route and view -->
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
           <app-route
             route="[[_route]]"
             pattern="/blankpage2"
@@ -313,7 +339,11 @@
             element-href="/elements/views/blankpage2-view.html">
           </px-view>
 
+<<<<<<< HEAD
           <!-- /Activity route and view -->
+=======
+          <!-- /Transit route and view -->
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
           <app-route
             route="[[_route]]"
             pattern="/mapdata"
@@ -324,6 +354,7 @@
             element-href="/elements/views/mapdata-view.html">
           </px-view>
 
+<<<<<<< HEAD
           <!-- /History route and view -->
           <app-route
             route="[[_route]]"
@@ -336,6 +367,21 @@
           </px-view>
 
           <!-- /dashboards route and view>
+=======
+          <!-- //winddata route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/winddata"
+            active="{{_winddataActive}}">
+          </app-route>
+          <px-view
+            active="[[_winddataActive]]"
+            element-href="/elements/views/winddata-view.html">
+          </px-view>
+
+          <!-- 
+          //dashboards route and view
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
           <app-route
             route="[[_route]]"
             pattern="/dashboards"
@@ -344,6 +390,7 @@
           <px-view
             active="[[_dashboardsActive]]"
             element-href="/elements/views/dashboards-view.html">
+<<<<<<< HEAD
           </px-view -->
 
           <!-- /winddata route and view>
@@ -356,6 +403,29 @@
             active="[[_winddataActive]]"
             element-href="/elements/views/winddata-view.html">
           </px-view -->
+=======
+          </px-view>
+          -->
+
+          <!--
+          <iron-ajax
+            auto 
+            url="" 
+            params='{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}' 
+            handle-as="json" 
+            last-response="{{handleIa1Response}}" 
+            debounce-duration="300">
+          </iron-ajax>
+          -->
+
+          <!--
+          <template is="dom-repeat" items="{{response}}">
+            <div>
+              <a href="{{item.html_url}}">{{item.title}}</a>
+            </div>
+          </template>
+          -->
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
 
         </main>
 
@@ -391,10 +461,40 @@
         navItems: {
           type: Array,
           value: function() {
+<<<<<<< HEAD
             return [{
+=======
+            return [
+            {
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
               "label": "Account",
               "path": "/blankpage",
               "icon": "fa-user"
+            }
+            ,{
+<<<<<<< HEAD
+              "label": "Contracts",
+              "path": "/blankpage2",
+              "icon": "fa-file-text-o"
+            }
+            ,{
+=======
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
+              "label": "Exchange",
+              "path": "/tabledata",
+              "icon": "fa-exchange"
+            }
+            ,{
+<<<<<<< HEAD
+=======
+              "label": "Timeline",
+              "path": "/timeline",
+              "icon": "fa-clock-o"
+            }
+            ,{
+              "label": "Ledger",
+              "path": "/table",
+              "icon": "fa-list"
             }
             ,{
               "label": "Contracts",
@@ -402,19 +502,21 @@
               "icon": "fa-file-text-o"
             }
             ,{
-              "label": "Exchange",
-              "path": "/tabledata",
-              "icon": "fa-exchange"
-            }
-            ,{
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
               "label": "Transit",
               "path": "/mapdata",
               "icon": "fa-map"
             }
             ,{
+<<<<<<< HEAD
               "label": "History",
               "path": "/timeline",
               "icon": "fa-list"
+=======
+              "label": "Windata",
+              "path": "/winddata",
+              "icon": "fa-line-chart"
+>>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
             }
             ]
           }

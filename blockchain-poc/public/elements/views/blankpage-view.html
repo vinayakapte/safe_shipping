@@ -1,16 +1,26 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">"
+
+<link rel="import" href="px-table-row.html"/>
+<link rel="import" href="px-table-row-action-button.html"/>
+<link rel="import" href="px-table-row-swipe-behavior.html"/>
+
+<link rel="import" href="px-table-view-icon.html"/>
+<link rel="import" href="px-table-view-sortable-list.html"/>
+
+<link rel="import" href="css/px-table-view-styles.html">
+<link rel="import" href="css/px-table-row-styles.html">
 
 <dom-module id="blankpage-view">
   <template>
-    <!-- px-view-header title="Blank Page" style="display: block; margin-bottom: 6px;"></px-view-header -->
- 
+   
     <blank-card id="myCard">
       
-      <select>
-        <option is="dom-repeat" value="{{participants.name}}">{{participants.name}}</option>
+      <select id="selectRowTemplate" items="{{participants}}" is="dom-repeat">
+        <option value="{{items.title}}">{{items.title}}</option>
       </select>
 
       <h3>Account Name: <span><strong>{{user.fullname}}</strong></span></h3>
@@ -32,7 +42,7 @@
       -->
     </iron-ajax>
 
-   </template>
+  </template>
   <script>
     Polymer({
       is: 'blankpage-view',
@@ -50,8 +60,21 @@
             return { first: 'John', last: 'Smith', fullname: 'John Smith' };
           }
         },
-        
-        
+        participants: {
+          type: Array,
+          value: [
+          { 
+            "title": "SFO > NYC", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-file-text-o"},{ 
+            "title": "SFO > MIA", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-list-alt"},{ 
+            "title": "SFO > DFW", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-check-square-o"},{ 
+            "title": "SFO > DCO", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-check-square-o"},{ 
+            "title": "SFO > ARZ", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-square-o"},{ 
+            "title": "SFO > ARK", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-exclamation-triangle"},{ 
+            "title": "SFO > LAX", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-exclamation-triangle"},{ 
+            "title": "SFO > SEA", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-exclamation"},{ 
+            "title": "SFO > SLC", "body": "DPT Vaccine - Requirement: < 38 Fahrenheit", "icon": "fa:fa-flag-checkered"}
+          ]
+        },
       },
       saveChanges: function() {
         // Display confirmation

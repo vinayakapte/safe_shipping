@@ -73,17 +73,6 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
-          <!-- /Account route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
-          </app-route>
-          <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
-          </px-view>
-
           <!-- /Activity route and view -->
           <app-route
             route="[[_route]]"
@@ -106,7 +95,18 @@
             element-href="/elements/views/timeline-view.html">
           </px-view>
 
-          <!-- /History route and view -->
+           <!-- /Contract route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
+           <!-- /Histiry route and view -->
           <app-route
             route="[[_route]]"
             pattern="/table"
@@ -117,18 +117,7 @@
             element-href="/elements/views/table-view.html">
           </px-view>
 
-          <!-- /winddata route and view>
-          <app-route
-            route="[[_route]]"
-            pattern="/winddata"
-            active="{{_winddataActive}}">
-          </app-route>
-          <px-view
-            active="[[_winddataActive]]"
-            element-href="/elements/views/winddata-view.html">
-          </px-view -->
-
-          <!-- /dashboards route and view>
+         <!-- /dashboards route and view>
           <app-route
             route="[[_route]]"
             pattern="/dashboards"
@@ -184,11 +173,10 @@
         navItems: {
           type: Array,
           value: function() {
-            return [
-            {
+            return [{
               "label": "Account",
               "path": "/blankpage",
-              "icon": "fa-user"
+              "icon": "fa-users"
             }
             ,{
               "label": "Exchange",
@@ -196,19 +184,14 @@
               "icon": "fa-exchange"
             }
             ,{
+              "label": "Contract",
+              "path": "/blankpage2",
+              "icon": "fa-file-text-o"
+            }
+            ,{
               "label": "Timeline",
               "path": "/timeline",
               "icon": "fa-clock-o"
-            }
-            ,{
-              "label": "Ledger",
-              "path": "/table",
-              "icon": "fa-list"
-            }
-            ,{
-              "label": "Contracts",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
             }
             ,{
               "label": "Transit",
@@ -216,9 +199,9 @@
               "icon": "fa-map"
             }
             ,{
-              "label": "Windata",
-              "path": "/winddata",
-              "icon": "fa-line-chart"
+              "label": "History",
+              "path": "/table",
+              "icon": "fa-list"
             }
             ]
           }
@@ -267,7 +250,7 @@
         // set default route to /dashboards
         var l = window.location;
         if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
-          l.hash = "/blankpage";
+          l.hash = "/dashboards";
         }
       }
 

@@ -22,6 +22,11 @@
   document.addEventListener('WebComponentsReady', function() {
     console.log('starting tests');
 
+      WCT.loadSuites([
+        'seed-test-01.html',
+        'seed-test-01.html?dom=shadow'
+      ]);
+
       suite('<seed-app>', function() {
         var home;
         var testFixture;
@@ -193,7 +198,7 @@
           expect(Polymer.dom(testFixture.root).querySelector('px-app-nav').navItems.length).to.equal(6);
         });
 
-        test('footerLinks object should be of type Array', function() {
+        test('Footer items source footerLinks object should be of type Array', function() {
           var footerLinks = testFixture.properties.footerLinks.value();
           assert(Array.isArray(footerLinks), 'footerLinks object has incorrect type: ' + typeof footerLinks);
         });
@@ -204,33 +209,33 @@
          */
 
         test('There should be a header element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('header')).not.to.equal(null), 'header element was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('header')).not.to.equal(null);
         });
 
         test('There should be a px-app-nav element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('px-app-nav')).not.to.equal(null), 'px-app-nav element was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('px-app-nav')).not.to.equal(null);
         });
 
         test('There should be an app-location element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('app-location')).not.to.equal(null), 'app-location element was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('app-location')).not.to.equal(null);
         });
 
         test('There should be initially 6 app-route elements', function() {
-          expect(Polymer.dom(testFixture.root).querySelectorAll('app-route').length).to.be.equal(6), 'app-route is not exactly 6 instances';
+          expect(Polymer.dom(testFixture.root).querySelectorAll('app-route').length).to.be.equal(6);
         });
 
         test('There should be initially 6 px-view elements', function() {
-          expect(Polymer.dom(testFixture.root).querySelectorAll('px-view').length).to.be.equal(6), 'px-view is not exactly 6 instances';
+          expect(Polymer.dom(testFixture.root).querySelectorAll('px-view').length).to.be.equal(6);
 
         });
 
         test('There should be a main element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('main')).not.to.equal(null), 'main element was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('main')).not.to.equal(null);
         });
 
         test('There should be a seed-footer element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('seed-footer')).not.to.equal(null), 'seed-footer element was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('seed-footer')).not.to.equal('undefined'), 'seed-footer element was undefined';
+          expect(Polymer.dom(testFixture.root).querySelector('seed-footer')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('seed-footer')).not.to.equal('undefined');
         });
 
         /* 
@@ -238,20 +243,20 @@
         */
 
         test('There should contain a header which has a TCS logo element', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('header tcs-svg-logo')).not.to.equal(null), '"tcs-svg-logo" path was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('header tcs-svg-logo')).not.to.equal(null);
         });
 
         test('There should contain a header which has the correct title', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('header h3').innerText).to.equal('SafeShipping'), '"SafeShipping" title was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('header h3').innerText).to.equal('SafeShipping');
         });
 
         test('There should be a view page for each menu item', function() {
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage-view.html"]')).not.to.equal(null), 'blankpage-view.html page was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/tabledata-view.html"]')).not.to.equal(null), 'tabledata-view.html page was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/mapdata-view.html"]')).not.to.equal(null), 'mapdata-view.html page was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/timeline-view.html"]')).not.to.equal(null), 'timeline-view.html page was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage2-view.html"]')).not.to.equal(null), 'blankpage2-view.html page was not found';
-          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/table-view.html"]')).not.to.equal(null), 'table-view.html page was not found';
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage-view.html"]')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/tabledata-view.html"]')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/mapdata-view.html"]')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/timeline-view.html"]')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage2-view.html"]')).not.to.equal(null);
+          expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/table-view.html"]')).not.to.equal(null);
         });
 
       });

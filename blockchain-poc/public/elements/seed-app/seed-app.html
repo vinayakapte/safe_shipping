@@ -17,7 +17,7 @@
 <link rel="import" href="../seed-footer/seed-footer.html">
 
 <dom-module id="seed-app">
-  <template>
+    <template>
 
     <!-- apply imported seed app style module -->
     <style include="seed-app-styles"></style>
@@ -36,7 +36,7 @@
     <div class="viewport">
 
       <div class="content-wrapper">
-        <px-app-nav style="min-height:100%!important;" 
+        <px-app-nav style="min-height:100%!important;"
           class="navbar"
           nav-items="[[navItems]]"
           path-prefix="[[pathPrefix]]">
@@ -147,113 +147,106 @@
     <seed-footer footer-links='[[footerLinks]]'></seed-footer>
 
   </template>
-  <script>
-    Polymer({
-      is: 'seed-app',
+    <script>
+        Polymer({
+            is: 'seed-app',
 
-      properties: {
+            properties: {
 
-        routesActive: {
-          type: Boolean,
-          value: false
-        },
+                routesActive: {
+                    type: Boolean,
+                    value: false
+                },
 
-        //Global application object
-        global: {
-          type: Object,
-          value: function() {
-            return {
-              version: '1.0',
-              name: 'Predix UI Seed',
-              session: {}
+                //Global application object
+                global: {
+                    type: Object,
+                    value: function() {
+                        return {
+                            version: '1.0',
+                            name: 'Predix UI Seed',
+                            session: {}
+                        }
+                    }
+                },
+
+                navItems: {
+                    type: Array,
+                    value: function() {
+                        return [{
+                            "label": "Account",
+                            "path": "/blankpage",
+                            "icon": "fa-users"
+                        }, {
+                            "label": "Exchange",
+                            "path": "/tabledata",
+                            "icon": "fa-exchange"
+                        }, {
+                            "label": "Contract",
+                            "path": "/blankpage2",
+                            "icon": "fa-file-text-o"
+                        }, {
+                            "label": "Timeline",
+                            "path": "/timeline",
+                            "icon": "fa-clock-o"
+                        }, {
+                            "label": "Transit",
+                            "path": "/mapdata",
+                            "icon": "fa-map"
+                        }, {
+                            "label": "History",
+                            "path": "/table",
+                            "icon": "fa-list"
+                        }]
+                    }
+                },
+
+                footerLinks: {
+                    type: Array,
+                    value: function() {
+                        return [{
+                            "label": "Privacy",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Terms",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Contact",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Accessibility",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Cookies",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }]
+                    }
+                },
+
+                // Sets app default base URL for client-side routing
+                pathPrefix: {
+                    type: String,
+                    value: '#'
+                }
+            },
+
+            ready: function() {
+                this._checkForDefaultRoute();
+            },
+
+            _checkForDefaultRoute: function() {
+                // set default route to /dashboards
+                var l = window.location;
+                if ((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
+                    l.hash = "/dashboards";
+                }
             }
-          }
-        },
 
-        navItems: {
-          type: Array,
-          value: function() {
-            return [{
-              "label": "Account",
-              "path": "/blankpage",
-              "icon": "fa-users"
-            }
-            ,{
-              "label": "Exchange",
-              "path": "/tabledata",
-              "icon": "fa-exchange"
-            }
-            ,{
-              "label": "Contract",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
-            }
-            ,{
-              "label": "Timeline",
-              "path": "/timeline",
-              "icon": "fa-clock-o"
-            }
-            ,{
-              "label": "Transit",
-              "path": "/mapdata",
-              "icon": "fa-map"
-            }
-            ,{
-              "label": "History",
-              "path": "/table",
-              "icon": "fa-list"
-            }
-            ]
-          }
-        },
-
-        footerLinks: {
-          type: Array,
-          value: function() {
-            return [{
-              "label": "Privacy",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Terms",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Contact",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Accessibility",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Cookies",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }
-          ]
-          }
-        },
-
-        // Sets app default base URL for client-side routing
-        pathPrefix: {
-          type: String,
-          value: '#'
-        }
-      },
-
-      ready: function(){
-        this._checkForDefaultRoute();
-      },
-
-      _checkForDefaultRoute: function() {
-        // set default route to /dashboards
-        var l = window.location;
-        if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
-          l.hash = "/dashboards";
-        }
-      }
-
-    });
-  </script>
+        });
+    </script>
 </dom-module>

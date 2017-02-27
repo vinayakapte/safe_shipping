@@ -12,7 +12,7 @@
 
 <dom-module id="three-widgets-card">
 
-  <template>
+    <template>
     <!-- apply imported style module -->
     <style include="three-widgets-card-styles"></style>
     <px-threeup id="widgetsx3" widget-header="Active Contracts" widget-icon="fa-file-text-o">
@@ -89,10 +89,8 @@
         <div class="flex flex--center">
           <div>
             <image src="../../resources/lifecycle.png"></image>
-          </div>
         </div>
       </div>
-
       <div class="widget-4">
         <p class="chart-header u-m0 u-pb++">
           [[_simpleDataValuesB.data.name]]
@@ -122,10 +120,10 @@
     </px-threeup>
   </template>
 
-  <script>
-    Polymer({
-      is: 'three-widgets-card'
-    });
-  </script>
+    <script>
+        Polymer({
+            is: 'three-widgets-card'
+        });
+    </script>
 
 </dom-module>

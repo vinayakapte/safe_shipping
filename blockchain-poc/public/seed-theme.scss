@@ -1,12 +1,12 @@
 // Settings
-@import "px-defaults-design/_settings.defaults.scss";
-@import "px-colors-design/_settings.colors.scss";
+@import 'px-defaults-design/_settings.defaults.scss';
+@import 'px-colors-design/_settings.colors.scss';
 
 // Tools
-@import "px-mixins-design/_tools.mixins.scss";
+@import 'px-mixins-design/_tools.mixins.scss';
 
 // theme variables
-$predix-font-family : "GE Inspira Sans", sans-serif !default;
+$predix-font-family: 'GE Inspira Sans';
 $px-page-html-background-color: $gray9;
 $px-page-link-color: $gray5;
 $px-page-spine-border-color: $gray8;
@@ -17,5 +17,5 @@ $px-page-card-background-color: $white;
 $px-page-card-text-color: $black;
 $px-page-card-paragraph-text-color: $gray5;
 $px-page-banner-text-color: $gray4;
-$px-page-banner-meatball-color : $gray4;
+$px-page-banner-meatball-color: $gray4;
 $px-page-main-content-area-background-color: $graybg;

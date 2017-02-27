@@ -72,6 +72,17 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
+          <!-- /Contract route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
           <!-- /Activity route and view -->
           <app-route
             route="[[_route]]"
@@ -92,6 +103,17 @@
           <px-view
             active="[[_timelineActive]]"
             element-href="/elements/views/timeline-view.html">
+          </px-view>
+
+          <!-- /History route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/table"
+            active="{{_tableActive}}">
+          </app-route>
+          <px-view
+            active="[[_tableActive]]"
+            element-href="/elements/views/table-view.html">
           </px-view>
 
           <!-- /dashboards route and view>

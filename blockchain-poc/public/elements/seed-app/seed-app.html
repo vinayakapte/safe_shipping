@@ -18,12 +18,13 @@
 
 <dom-module id="seed-app">
     <template>
+
     <!-- apply imported seed app style module -->
     <style include="seed-app-styles"></style>
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SafeShipping</h3>
+        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SmartTransport</h3>
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
             <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
@@ -72,17 +73,6 @@
             element-href="/elements/views/tabledata-view.html">
           </px-view>
 
-          <!-- /Contract route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
-          </app-route>
-          <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
-          </px-view>
-
           <!-- /Activity route and view -->
           <app-route
             route="[[_route]]"
@@ -105,7 +95,18 @@
             element-href="/elements/views/timeline-view.html">
           </px-view>
 
-          <!-- /History route and view -->
+           <!-- /Contract route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/blankpage2"
+            active="{{_blankpage2Active}}">
+          </app-route>
+          <px-view
+            active="[[_blankpage2Active]]"
+            element-href="/elements/views/blankpage2-view.html">
+          </px-view>
+
+           <!-- /Histiry route and view -->
           <app-route
             route="[[_route]]"
             pattern="/table"
@@ -116,7 +117,7 @@
             element-href="/elements/views/table-view.html">
           </px-view>
 
-          <!-- /dashboards route and view>
+         <!-- /dashboards route and view>
           <app-route
             route="[[_route]]"
             pattern="/dashboards"
@@ -199,6 +200,7 @@
                         }]
                     }
                 },
+
                 footerLinks: {
                     type: Array,
                     value: function() {

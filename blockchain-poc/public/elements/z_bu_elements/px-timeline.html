@@ -3,7 +3,7 @@
     siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
     'gulp serve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
 -->
-<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="px-timeline-node-container.html">
 <link rel="import" href="css/px-timeline-styles.html">
 
@@ -147,7 +147,7 @@ Custom property | Description | Default
 -->
 
 <dom-module id="px-timeline">
-  <template>
+    <template>
     <style include="px-timeline-styles"></style>
     <div class="main-box flex--center flex--col">
       <px-timeline-node-container
@@ -163,270 +163,259 @@ Custom property | Description | Default
   </template>
 </dom-module>
 <script>
-  Polymer({
+    Polymer({
 
-    is: 'px-timeline',
+        is: 'px-timeline',
 
-    behaviors: [],
+        behaviors: [],
 
-    properties: {
-      /**
-       * Data for the timeline.
-       *
-       * Expected data format is a json array of objects.  Each object in the array represents a timeline node entry. Timeline data is expected to be sorted before passing to the px-timeline component.
-       *
-       *
-       *     <px-timeline timeline-data="{{data}}"></px-timeline>
-       *
-       */
-      timelineData: {
-        type: Array,
-        observer: '_timelineDataChanged',
-        value: [
-          {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-dollar"
-            },
-            "content": {
-              "title": "SFO > NYC - PAYMENT COMPLETE",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Payment",
-                  "value": "Released - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-search"
-            },
-            "content": {
-              "title": "SFO > NYC - REQUIREMENTS VERIFIED",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Requirements",
-                  "value": "Verified - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-check"
-            },
-            "content": {
-              "title": "SFO > NYC - DESTINATION COMPLETE",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Destination",
-                  "value": "New York City, NY - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-check"
-            },
-            "content": {
-              "title": "SFO > NYC - INTERVAL CHECK",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Interval",
-                  "value": "New York City, NY - Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Ok - Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-check"
-            },
-            "content": {
-              "title": "SFO > NYC - INTERVAL CHECK",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Interval",
-                  "value": "Chicago, IL - Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Ok - Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-check"
-            },
-            "content": {
-              "title": "SFO > NYC - INTERVAL CHECK",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Interval",
-                  "value": "Omaha, NB - Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Ok - Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-check"
-            },
-            "content": {
-              "title": "SFO > NYC - INTERVAL CHECK",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Interval",
-                  "value": "Salt Lake City, UT - Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Status",
-                  "value": "Ok - Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SmartCargo Operations",
-              "editedDate": "Mon Oct 27 2016 06:37:00 GMT-0700 (PDT)",
-              "customIcon": "fa-map-o"
-            },
-            "content": {
-              "title": "SFO > NYC - ITINERARY",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Departure",
-                  "value": "San Fransisco, CA - Thu Oct 27 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Estimate Arrival",
-                  "value": "New York City, NY - Mon Oct 31 2016 03:15:00 GMT-0400 (EDT)"
-                },
-                { "key": "Expected Delivery Time",
-                  "value": "4 days, 6 Hours, 43 minutes"
-                },
-                { "key": "Requirements",
-                  "value": "Temprature Sensitive: < 38° Fahrenheit"
-                }
-              ]
-            }
-          }, {
-            "metaData": {
-              "editedBy": "SafeShipping",
-              "editedDate": "Thu Oct 25 2016 18:28:10 GMT-0700 (PDT)",
-              "editorTitle": "Administrator",
-              "customIcon": "fa-file-text-o"
-            },
-            "content": {
-              "title": "SFO > NYC - CONTRACT CREATED",
-              "bodyType": "LIST",
-              "body": [
-                { "key": "Departure",
-                  "value": "San Fransisco, CA - Thu Oct 27 2016 06:37:00 GMT-0700 (PDT)"
-                },
-                { "key": "Estimate Arrival",
-                  "value": "New York City, NY - Mon Oct 31 2016 03:15:00 GMT-0400 (EDT)"
-                },
-                { "key": "Expected Delivery Time",
-                  "value": "4 days, 6 Hours, 43 minutes"
-                },
-                { "key": "Deliverables",
-                  "value": "DPT Vaccine"
-                },
-                { "key": "Quantity",
-                  "value": "1000 per box / 100 boxes per lot / 5 lots per pallet / 20 pallets"
-                },
-                { "key": "Requirements",
-                  "value": "Temprature Sensitive: < 38° Fahrenheit"
-                }
-              ]
-            }
-          }
-        ]
+        properties: {
+            /**
+             * Data for the timeline.
+             *
+             * Expected data format is a json array of objects.  Each object in the array represents a timeline node entry. Timeline data is expected to be sorted before passing to the px-timeline component.
+             *
+             *
+             *     <px-timeline timeline-data="{{data}}"></px-timeline>
+             *
+             */
+            timelineData: {
+                type: Array,
+                observer: '_timelineDataChanged',
+                value: [{
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-dollar"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - PAYMENT COMPLETE",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Payment",
+                            "value": "Released - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-search"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - REQUIREMENTS VERIFIED",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Requirements",
+                            "value": "Verified - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-check"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - DESTINATION COMPLETE",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Destination",
+                            "value": "New York City, NY - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Complete - Mon Oct 31 2016 09:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-check"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - INTERVAL CHECK",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Interval",
+                            "value": "New York City, NY - Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Ok - Mon Oct 31 2016 06:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-check"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - INTERVAL CHECK",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Interval",
+                            "value": "Chicago, IL - Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Ok - Sun Oct 30 2016 06:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-check"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - INTERVAL CHECK",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Interval",
+                            "value": "Omaha, NB - Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Ok - Sat Oct 29 2016 06:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-check"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - INTERVAL CHECK",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Interval",
+                            "value": "Salt Lake City, UT - Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Status",
+                            "value": "Ok - Fri Oct 28 2016 06:37:00 GMT-0700 (PDT)"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SmartCargo Operations",
+                        "editedDate": "Mon Oct 27 2016 06:37:00 GMT-0700 (PDT)",
+                        "customIcon": "fa-map-o"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - ITINERARY",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Departure",
+                            "value": "San Fransisco, CA - Thu Oct 27 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Estimate Arrival",
+                            "value": "New York City, NY - Mon Oct 31 2016 03:15:00 GMT-0400 (EDT)"
+                        }, {
+                            "key": "Expected Delivery Time",
+                            "value": "4 days, 6 Hours, 43 minutes"
+                        }, {
+                            "key": "Requirements",
+                            "value": "Temprature Sensitive: < 38° Fahrenheit"
+                        }]
+                    }
+                }, {
+                    "metaData": {
+                        "editedBy": "SafeShipping",
+                        "editedDate": "Thu Oct 25 2016 18:28:10 GMT-0700 (PDT)",
+                        "editorTitle": "Administrator",
+                        "customIcon": "fa-file-text-o"
+                    },
+                    "content": {
+                        "title": "SFO > NYC - CONTRACT CREATED",
+                        "bodyType": "LIST",
+                        "body": [{
+                            "key": "Departure",
+                            "value": "San Fransisco, CA - Thu Oct 27 2016 06:37:00 GMT-0700 (PDT)"
+                        }, {
+                            "key": "Estimate Arrival",
+                            "value": "New York City, NY - Mon Oct 31 2016 03:15:00 GMT-0400 (EDT)"
+                        }, {
+                            "key": "Expected Delivery Time",
+                            "value": "4 days, 6 Hours, 43 minutes"
+                        }, {
+                            "key": "Deliverables",
+                            "value": "DPT Vaccine"
+                        }, {
+                            "key": "Quantity",
+                            "value": "1000 per box / 100 boxes per lot / 5 lots per pallet / 20 pallets"
+                        }, {
+                            "key": "Requirements",
+                            "value": "Temprature Sensitive: < 38° Fahrenheit"
+                        }]
+                    }
+                }]
 
-      },
-      /**
-       * Startdate is today's date and is the head of the timeline. Startdate does not need to be passed into the component.
-       *
-       *
-       */
-      startDate: {
-        type: Object
-      },
-      /**
-       * Use the showTimeGroups attribute to group the timeline node entries by generic time groups. Time groups include Today, This Week, This Month, This Year and Last Year.
-       *
-       *      <px-timeline enhanced="false" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
-       *
-       * @default 'Left Side'
-       */
-      showTimeGroups: {
-        type: Boolean
-        // observer: '_timeGroupsChanged'
-      },
-      /**
-       * Use the enhanced attribute to create a basic or enhanced timeline.
-       *
-       *      <px-timeline enhanced="false" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
-       *
-       * @default false
-       */
-      enhanced: {
-        type: Boolean,
-        value: true
-      },
-      /**
-       * Use the showNodeContent attribute to set all nodes of an enhanced timeline to open as default. Note: This attribute only impacts enhanced timeleines.
-       *
-       *      <px-timeline show-node-content="true" enhanced="true" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
-       *
-       * @default false
-       */
-      showNodeContent: {
-        type: Boolean,
-        value: false
-      },
-      /**
-       * nodeCount is used in logic controlling when to break the timeline with the time groups Today, This Week, This Month, This Year.
-       *
-       * nodeCount is simply the length of the data array and does not need to be passed in as an option of the px-timeline component.
-       *
-       */
-      nodeCount: {
-        type: Number
-      }
-    },
-    ready: function () {
-      this.startDate = new Date();
-    },
-    _timelineDataChanged: function (newValue, oldValue) {
-      if (newValue && newValue.length) {
-        this.nodeCount = newValue.length;
-      }
-      return this.timelineData = newValue;
-    }
-  });
+            },
+            /**
+             * Startdate is today's date and is the head of the timeline. Startdate does not need to be passed into the component.
+             *
+             *
+             */
+            startDate: {
+                type: Object
+            },
+            /**
+             * Use the showTimeGroups attribute to group the timeline node entries by generic time groups. Time groups include Today, This Week, This Month, This Year and Last Year.
+             *
+             *      <px-timeline enhanced="false" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
+             *
+             * @default 'Left Side'
+             */
+            showTimeGroups: {
+                type: Boolean
+                    // observer: '_timeGroupsChanged'
+            },
+            /**
+             * Use the enhanced attribute to create a basic or enhanced timeline.
+             *
+             *      <px-timeline enhanced="false" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
+             *
+             * @default false
+             */
+            enhanced: {
+                type: Boolean,
+                value: true
+            },
+            /**
+             * Use the showNodeContent attribute to set all nodes of an enhanced timeline to open as default. Note: This attribute only impacts enhanced timeleines.
+             *
+             *      <px-timeline show-node-content="true" enhanced="true" node-position="Left Side" timeline-data="{{data}}"></px-timeline>
+             *
+             * @default false
+             */
+            showNodeContent: {
+                type: Boolean,
+                value: false
+            },
+            /**
+             * nodeCount is used in logic controlling when to break the timeline with the time groups Today, This Week, This Month, This Year.
+             *
+             * nodeCount is simply the length of the data array and does not need to be passed in as an option of the px-timeline component.
+             *
+             */
+            nodeCount: {
+                type: Number
+            }
+        },
+        ready: function() {
+            this.startDate = new Date();
+        },
+        _timelineDataChanged: function(newValue, oldValue) {
+            if (newValue && newValue.length) {
+                this.nodeCount = newValue.length;
+            }
+            return this.timelineData = newValue;
+        }
+    });
 </script>

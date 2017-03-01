@@ -3,39 +3,44 @@
 <link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
 
 <dom-module id="blankpage2-view">
-  <template>
- 
+    <template>
+
     <three-widgets-card id="myCard">
-      
+
     </three-widgets-card>
 
    </template>
-  <script>
-    Polymer({
-      is: 'blankpage2-view',
-      properties: {
-        ready: function() {
-          //console.log('blankpage-view ready()');
-          getCurrentTime();
-        },
-        user: {
-          type: Object,
-          value: function() {
-            return { name: 'Rob', manager: 'Paul' };
-          }
-        },
-        clock: {
-          type: Object,
-          value: function getCurrentTime() {
-            var n = new Date().toLocaleTimeString();
-            return { time: n };
-            //self.async(getCurrentTime(), null, 1000);
-          },
-        }
-      },
-      changeManager: function() {
-        this.set('user.manager', 'Jimmy');
-      }
-    });
-  </script>
+    <script>
+        Polymer({
+            is: 'blankpage2-view',
+            properties: {
+                ready: function() {
+                    //console.log('blankpage-view ready()');
+                    getCurrentTime();
+                },
+                user: {
+                    type: Object,
+                    value: function() {
+                        return {
+                            name: 'Rob',
+                            manager: 'Paul'
+                        };
+                    }
+                },
+                clock: {
+                    type: Object,
+                    value: function getCurrentTime() {
+                        var n = new Date().toLocaleTimeString();
+                        return {
+                            time: n
+                        };
+                        //self.async(getCurrentTime(), null, 1000);
+                    },
+                }
+            },
+            changeManager: function() {
+                this.set('user.manager', 'Jimmy');
+            }
+        });
+    </script>
 </dom-module>

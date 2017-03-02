@@ -1,23 +1,22 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/px-card/px-card.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../../bower_components/px-table-view/px-table-view.html">
+
+<link rel="import" href="../table-card/table-card.html">
 
 <dom-module id="table-view">
-  <template>
-    <px-card header-text="Ledger History">
-      <px-table-view id="mytableview">
+    <template>
+    <table-card id="mytablecard">
 
-      </px-table-view>
-    </px-card>
+    </table-card>
   </template>
-  
-  <script>
-    Polymer({
-      is: 'table-view',
-      properties: {
-        
-      }
-    });
-  </script>
+
+    <script>
+        Polymer({
+            is: 'table-view',
+            properties: {
+
+            }
+        });
+    </script>
 </dom-module>

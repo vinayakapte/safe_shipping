@@ -1,17 +1,18 @@
 <!-- import polymer -->
-<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
 
-<!-- import page level css -->
-<link rel="import" href="seed-app-styles.html">
+<!-- px components -->
+<link rel="import" href="/bower_components/px-app-nav/px-app-nav.html">
+<link rel="import" href="../../bower_components/px-view/px-view.html">
 
 <!-- app route -->
 <link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/app-route/app-route.html">
 
-<!-- px components -->
-<link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
-<link rel="import" href="../../bower_components/px-view/px-view.html">
+<!-- import page level css -->
+<link rel="import" href="seed-app-styles.html">
 
+<!-- import page level default elements -->
 <link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
 <link rel="import" href="../predix-logo/predix-logo.html">
 <link rel="import" href="../seed-footer/seed-footer.html">
@@ -24,7 +25,7 @@
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SmartTransport</h3>
+        <h3 class="flex__item app-title"><ge-svg-logo class="u-mr--"></ge-svg-logo> SmartTransport</h3>
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
             <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
@@ -59,7 +60,7 @@
           </app-route>
           <px-view
             active="[[_accountActive]]"
-            element-href="/elements/views/account-view.html">
+            element-href="/elements/views/account/account-view.html">
           </px-view>
 
           <!-- /Exchange route and view -->
@@ -70,7 +71,7 @@
           </app-route>
           <px-view
             active="[[_exchangeActive]]"
-            element-href="/elements/views/exchange-view.html">
+            element-href="/elements/views/exchange/exchange-view.html">
           </px-view>
 
            <!-- /Contract route and view -->
@@ -81,7 +82,7 @@
           </app-route>
           <px-view
             active="[[_contractActive]]"
-            element-href="/elements/views/contract-view.html">
+            element-href="/elements/views/contract/contract-view.html">
           </px-view>
 
           <!-- /Timeline route and view -->
@@ -92,7 +93,7 @@
           </app-route>
           <px-view
             active="[[_timelineActive]]"
-            element-href="/elements/views/timeline-view.html">
+            element-href="/elements/views/timeline/timeline-view.html">
           </px-view>
 
           <!-- /Transit Map route and view -->
@@ -103,7 +104,7 @@
           </app-route>
           <px-view
             active="[[_transitActive]]"
-            element-href="/elements/views/transit-view.html">
+            element-href="/elements/views/transit/transit-view.html">
           </px-view>
 
            <!-- /History route and view -->
@@ -114,7 +115,7 @@
           </app-route>
           <px-view
             active="[[_historyActive]]"
-            element-href="/elements/views/history-view.html">
+            element-href="/elements/views/history/history-view.html">
           </px-view>
 
          <!-- /dashboards route and view>

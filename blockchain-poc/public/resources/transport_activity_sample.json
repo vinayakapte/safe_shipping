@@ -1,0 +1,37 @@
+[{
+    "title": "SFO > NYC",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-file-text-o"
+}, {
+    "title": "SFO > MIA",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-list-alt"
+}, {
+    "title": "SFO > DFW",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-check-square-o"
+}, {
+    "title": "SFO > DCO",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-check-square-o"
+}, {
+    "title": "SFO > ARZ",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-square-o"
+}, {
+    "title": "SFO > ARK",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-exclamation-triangle"
+}, {
+    "title": "SFO > LAX",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-exclamation-triangle"
+}, {
+    "title": "SFO > SEA",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-exclamation"
+}, {
+    "title": "SFO > SLC",
+    "body": "DPT Vaccine - Requirement: < 38 Fahrenheit",
+    "icon": "fa:fa-flag-checkered"
+}]

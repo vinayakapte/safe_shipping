@@ -1,0 +1,57 @@
+[{
+    "Supplier": "Freight Transportation",
+    "Type": "Truck",
+    "Price": "$12.00"
+}, {
+    "Supplier": "MCT Transportation",
+    "Type": "Truck",
+    "Price": "$13.50"
+}, {
+    "Supplier": "Consolidated Freight",
+    "Type": "Truck",
+    "Price": "$12.70"
+}, {
+    "Supplier": "Swift Transportation",
+    "Type": "Truck",
+    "Price": "$12.50"
+}, {
+    "Supplier": "United Parcel Service",
+    "Type": "Truck",
+    "Price": "$11.50"
+}, {
+    "Supplier": "Old Dominion Freight Line",
+    "Type": "Truck",
+    "Price": "$13.20"
+}, {
+    "Supplier": "Fedex",
+    "Type": "Truck",
+    "Price": "$13.80"
+}, {
+    "Supplier": "XPO Logistics",
+    "Type": "Truck",
+    "Price": "$13.30"
+}, {
+    "Supplier": "JB Hunt Transport Services",
+    "Type": "Truck",
+    "Price": "$13.50"
+}, {
+    "Supplier": "YRC Worldwide",
+    "Type": "Truck",
+    "Price": "$13.00"
+}, {
+    "Supplier": "Schneider National",
+    "Type": "Truck",
+    "Price": "$13.20"
+}, {
+    "Supplier": "Landstar Systems",
+    "Type": "Truck",
+    "Price": "$13.10"
+}, {
+    "Supplier": "Werner Enterprises",
+    "Type": "Truck",
+    "Price": "$13.25"
+}, {
+    "Supplier": "Hub Group",
+    "Type": "Truck",
+    "Price": "$13.20"
+}]

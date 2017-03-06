@@ -1,0 +1,84 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<!--<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">"
+
+<link rel="import" href="../../bower_components/px-table-view/px-table-row.html" />
+<link rel="import" href="../../bower_components/px-table-view/px-table-row-action-button.html" />
+<link rel="import" href="../../bower_components/px-table-view/px-table-row-swipe-behavior.html" />
+
+<link rel="import" href="../../bower_components/px-table-view/px-table-view-icon.html" />
+<link rel="import" href="../../bower_components/px-table-view/px-table-view-sortable-list.html" />
+
+<link rel="import" href="../../bower_components/px-table-view/css/px-table-view-styles.html">
+<link rel="import" href="../../bower_components/px-table-view/css/px-table-row-styles.html">-->
+
+<dom-module id="account-view">
+    <template>
+
+    <blank-card id="myCard">
+
+      <select id="selectRowTemplate" items="{{participants}}" is="dom-repeat">
+        <option value="{{items.title}}">{{items.title}}</option>
+      </select>
+
+      <h3>Account Name: <span><strong>{{user.fullname}}</strong></span></h3>
+      <h3>Role: <span><strong>Consumer</strong></span></h3>
+      <button on-tap="saveChanges">Save Changes</button>
+
+    </blank-card>
+
+    <!-- IronAjax used to load participants data from local json file. Later to use service URL -->
+    <iron-ajax
+      id="participantsIronAjax"
+      url="/server/sample-data/persistantTable.json"
+      last-response="{{_decksResponse}}">
+
+      <!--
+        // original
+        auto
+        url="[[_decksUrl]]""
+      -->
+    </iron-ajax>
+
+  </template>
+    <script>
+        Polymer({
+            is: 'account-view',
+            properties: {
+                ready: function() {
+                    //console.log('account-view ready()');
+                    //getCurrentTime();
+                },
+                user: {
+                    type: Object,
+                    first: String,
+                    last: String,
+                    fullname: String,
+                    value: function() {
+                        return {
+                            first: 'John',
+                            last: 'Smith',
+                            fullname: 'John Smith'
+                        };
+                    }
+                },
+                participants: {
+                    type: Array,
+                    value: []
+                },
+            },
+            saveChanges: function() {
+                // Display confirmation
+                this.set('user.first', 'Jimmy');
+                // return {
+                //     first: 'Jimmy',
+                //     last: 'Johnson',
+                //     fullname: user.first + ' ' + user.last
+                // };
+            },
+
+        });
+    </script>
+</dom-module>

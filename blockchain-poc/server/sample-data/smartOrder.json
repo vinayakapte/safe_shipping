@@ -9,10 +9,10 @@
             "arriveDate": null,
             "arriveLocation": null,
             "transitLegs": [{
-                "item": ["key","value"]
+                "item": ["key", "value"]
             }],
             "requirements": [{
-                "item": ["key","value"]
+                "item": ["key", "value"]
             }]
         },
         "smartSupplier": {
@@ -34,7 +34,7 @@
             "miscellaneous": null
         },
         "smartActivity": [{
-            "item": ["key","value"]
+            "item": ["key", "value"]
         }]
     }]
 }]

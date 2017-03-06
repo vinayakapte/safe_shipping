@@ -1,38 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
 <!-- import polymer -->
-<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
 
-<!-- import page level css -->
-<link rel="import" href="seed-app-styles.html">
+<!-- px components -->
+<link rel="import" href="/bower_components/px-app-nav/px-app-nav.html">
+<link rel="import" href="../../bower_components/px-view/px-view.html">
 
 <!-- app route -->
 <link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/app-route/app-route.html">
 
-<!-- px components -->
-<link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
-<link rel="import" href="../../bower_components/px-view/px-view.html">
+<!-- import page level css -->
+<link rel="import" href="seed-app-styles.html">
 
+<!-- import page level default elements -->
 <link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
 <link rel="import" href="../predix-logo/predix-logo.html">
 <link rel="import" href="../seed-footer/seed-footer.html">
 
 <dom-module id="seed-app">
-  <template>
+    <template>
 
     <!-- apply imported seed app style module -->
     <style include="seed-app-styles"></style>
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-<<<<<<< HEAD
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> Smart Transport</h3>
-=======
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> SafeShipping</h3>
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
+        <h3 class="flex__item app-title"><ge-svg-logo class="u-mr--"></ge-svg-logo> SmartTransport</h3>
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
             <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
@@ -44,7 +37,7 @@
     <div class="viewport">
 
       <div class="content-wrapper">
-        <px-app-nav style="min-height:100%!important;" 
+        <px-app-nav style="min-height:100%!important;"
           class="navbar"
           nav-items="[[navItems]]"
           path-prefix="[[pathPrefix]]">
@@ -62,41 +55,37 @@
           <!-- /Account route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/blankpage"
-            active="{{_blankpageActive}}">
+            pattern="/account"
+            active="{{_accountActive}}">
           </app-route>
           <px-view
-            active="[[_blankpageActive]]"
-            element-href="/elements/views/blankpage-view.html">
+            active="[[_accountActive]]"
+            element-href="/elements/views/account/account-view.html">
           </px-view>
 
           <!-- /Exchange route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/tabledata"
-            active="{{_tabledataActive}}">
+            pattern="/exchange"
+            active="{{_exchangeActive}}">
           </app-route>
           <px-view
-            active="[[_tabledataActive]]"
-            element-href="/elements/views/tabledata-view.html">
+            active="[[_exchangeActive]]"
+            element-href="/elements/views/exchange/exchange-view.html">
           </px-view>
 
-<<<<<<< HEAD
-          <!-- /Activity route and view -->
+           <!-- /Contract route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/mapdata"
-            active="{{_mapdataActive}}">
+            pattern="/contract"
+            active="{{_contractActive}}">
           </app-route>
           <px-view
-            active="[[_mapdataActive]]"
-            element-href="/elements/views/mapdata-view.html">
+            active="[[_contractActive]]"
+            element-href="/elements/views/contract/contract-view.html">
           </px-view>
 
-          <!-- /History route and view -->
-=======
           <!-- /Timeline route and view -->
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
           <app-route
             route="[[_route]]"
             pattern="/timeline"
@@ -104,11 +93,32 @@
           </app-route>
           <px-view
             active="[[_timelineActive]]"
-            element-href="/elements/views/timeline-view.html">
+            element-href="/elements/views/timeline/timeline-view.html">
           </px-view>
 
-<<<<<<< HEAD
-          <!-- /dashboards route and view>
+          <!-- /Transit Map route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/transit"
+            active="{{_transitActive}}">
+          </app-route>
+          <px-view
+            active="[[_transitActive]]"
+            element-href="/elements/views/transit/transit-view.html">
+          </px-view>
+
+           <!-- /History route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/history"
+            active="{{_historyActive}}">
+          </app-route>
+          <px-view
+            active="[[_historyActive]]"
+            element-href="/elements/views/history/history-view.html">
+          </px-view>
+
+         <!-- /dashboards route and view>
           <app-route
             route="[[_route]]"
             pattern="/dashboards"
@@ -138,438 +148,106 @@
     <seed-footer footer-links='[[footerLinks]]'></seed-footer>
 
   </template>
-  <script>
-    Polymer({
-      is: 'seed-app',
+    <script>
+        Polymer({
+            is: 'seed-app',
 
-      properties: {
+            properties: {
 
-        routesActive: {
-          type: Boolean,
-          value: false
-        },
+                routesActive: {
+                    type: Boolean,
+                    value: false
+                },
 
-        //Global application object
-        global: {
-          type: Object,
-          value: function() {
-            return {
-              version: '1.0',
-              name: 'Predix UI Seed',
-              session: {}
+                //Global application object
+                global: {
+                    type: Object,
+                    value: function() {
+                        return {
+                            version: '1.0',
+                            name: 'Predix UI Seed',
+                            session: {}
+                        }
+                    }
+                },
+
+                navItems: {
+                    type: Array,
+                    value: function() {
+                        return [{
+                            "label": "Account",
+                            "path": "/account",
+                            "icon": "fa-users"
+                        }, {
+                            "label": "Exchange",
+                            "path": "/exchange",
+                            "icon": "fa-exchange"
+                        }, {
+                            "label": "Contract",
+                            "path": "/contract",
+                            "icon": "fa-file-text-o"
+                        }, {
+                            "label": "Timeline",
+                            "path": "/timeline",
+                            "icon": "fa-clock-o"
+                        }, {
+                            "label": "Transit",
+                            "path": "/transit",
+                            "icon": "fa-map"
+                        }, {
+                            "label": "History",
+                            "path": "/history",
+                            "icon": "fa-list"
+                        }]
+                    }
+                },
+
+                footerLinks: {
+                    type: Array,
+                    value: function() {
+                        return [{
+                            "label": "Privacy",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Terms",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Contact",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Accessibility",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }, {
+                            "label": "Cookies",
+                            "href": "#/dashboards",
+                            "target": "_blank"
+                        }]
+                    }
+                },
+
+                // Sets app default base URL for client-side routing
+                pathPrefix: {
+                    type: String,
+                    value: '#'
+                }
+            },
+
+            ready: function() {
+                this._checkForDefaultRoute();
+            },
+
+            _checkForDefaultRoute: function() {
+                // set default route to /dashboards
+                var l = window.location;
+                if ((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
+                    l.hash = "/dashboards";
+                }
             }
-          }
-        },
 
-        navItems: {
-          type: Array,
-          value: function() {
-            return [{
-              "label": "Account",
-              "path": "/blankpage",
-              "icon": "fa-users"
-            }
-            ,{
-              "label": "Exchange",
-              "path": "/tabledata",
-              "icon": "fa-exchange"
-            }
-            ,{
-              "label": "Transit",
-              "path": "/mapdata",
-              "icon": "fa-map"
-            }
-            ,{
-              "label": "History",
-              "path": "/timeline",
-              "icon": "fa-list"
-            }
-            ]
-          }
-        },
-
-        footerLinks: {
-          type: Array,
-          value: function() {
-            return [{
-              "label": "Privacy",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Terms",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Contact",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Accessibility",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Cookies",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }
-          ]
-          }
-        },
-
-        // Sets app default base URL for client-side routing
-        pathPrefix: {
-          type: String,
-          value: '#'
-        }
-      },
-
-      ready: function(){
-        this._checkForDefaultRoute();
-      },
-
-      _checkForDefaultRoute: function() {
-        // set default route to /dashboards
-        var l = window.location;
-        if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
-          l.hash = "/dashboards";
-        }
-      }
-
-    });
-  </script>
+        });
+    </script>
 </dom-module>
-=======
-<!-- import polymer -->
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-
-<!-- import page level css -->
-<link rel="import" href="seed-app-styles.html">
-
-<!-- app route -->
-<link rel="import" href="../../bower_components/app-route/app-location.html">
-<link rel="import" href="../../bower_components/app-route/app-route.html">
-
-<!-- px components -->
-<link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
-<link rel="import" href="../../bower_components/px-view/px-view.html">
-
-<link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
-<link rel="import" href="../predix-logo/predix-logo.html">
-<link rel="import" href="../seed-footer/seed-footer.html">
-
-<dom-module id="seed-app">
-  <template>
-
-    <!-- apply imported seed app style module -->
-    <style include="seed-app-styles"></style>
-
-    <header role="banner" class="flex flex--middle">
-      <div class="viewport flex">
-        <h3 class="flex__item app-title"><tcs-svg-logo class="u-mr--"></tcs-svg-logo> Smart Transport</h3>
-        <div class="flex__item">
-          <div class="flex" style="text-align:right;">
-            <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="viewport">
-
-      <div class="content-wrapper">
-        <px-app-nav style="min-height:100%!important;" 
-          class="navbar"
-          nav-items="[[navItems]]"
-          path-prefix="[[pathPrefix]]">
-        </px-app-nav>
-
-        <main class="u-pt-- u-pr-- u-pl--" role="main">
-
-          <!-- app-location captures url and assigns _route value -->
-          <app-location
-            id="carbonLocation"
-            route="{{_route}}"
-            use-hash-as-path>
-          </app-location>
-
-          <!-- /Account route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage"
-            active="{{_blankpageActive}}">
-          </app-route>
-          <px-view
-            active="[[_blankpageActive]]"
-            element-href="/elements/views/blankpage-view.html">
-          </px-view>
-
-          <!-- /Exchange route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/tabledata"
-            active="{{_tabledataActive}}">
-          </app-route>
-          <px-view
-            active="[[_tabledataActive]]"
-            element-href="/elements/views/tabledata-view.html">
-          </px-view>
-
-          <!-- /Account route and view -->
-=======
-          <!-- /Ledger route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/table"
-            active="{{_tableActive}}">
-          </app-route>
-          <px-view
-            active="[[_tableActive]]"
-            element-href="/elements/views/table-view.html">
-          </px-view>
-
-          <!-- /Contract route and view -->
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
-          </app-route>
-          <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
-          </px-view>
-
-<<<<<<< HEAD
-          <!-- /Activity route and view -->
-=======
-          <!-- /Transit route and view -->
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-          <app-route
-            route="[[_route]]"
-            pattern="/mapdata"
-            active="{{_mapdataActive}}">
-          </app-route>
-          <px-view
-            active="[[_mapdataActive]]"
-            element-href="/elements/views/mapdata-view.html">
-          </px-view>
-
-<<<<<<< HEAD
-          <!-- /History route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/timeline"
-            active="{{_timelineActive}}">
-          </app-route>
-          <px-view
-            active="[[_timelineActive]]"
-            element-href="/elements/views/timeline-view.html">
-          </px-view>
-
-          <!-- /dashboards route and view>
-=======
-          <!-- //winddata route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/winddata"
-            active="{{_winddataActive}}">
-          </app-route>
-          <px-view
-            active="[[_winddataActive]]"
-            element-href="/elements/views/winddata-view.html">
-          </px-view>
-
-          <!-- 
-          //dashboards route and view
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-          <app-route
-            route="[[_route]]"
-            pattern="/dashboards"
-            active="{{_dashboardsActive}}">
-          </app-route>
-          <px-view
-            active="[[_dashboardsActive]]"
-            element-href="/elements/views/dashboards-view.html">
-<<<<<<< HEAD
-          </px-view -->
-
-          <!-- /winddata route and view>
-          <app-route
-            route="[[_route]]"
-            pattern="/winddata"
-            active="{{_winddataActive}}">
-          </app-route>
-          <px-view
-            active="[[_winddataActive]]"
-            element-href="/elements/views/winddata-view.html">
-          </px-view -->
-=======
-          </px-view>
-          -->
-
-          <!--
-          <iron-ajax
-            auto 
-            url="" 
-            params='{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}' 
-            handle-as="json" 
-            last-response="{{handleIa1Response}}" 
-            debounce-duration="300">
-          </iron-ajax>
-          -->
-
-          <!--
-          <template is="dom-repeat" items="{{response}}">
-            <div>
-              <a href="{{item.html_url}}">{{item.title}}</a>
-            </div>
-          </template>
-          -->
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-
-        </main>
-
-      </div>
-    </div>
-
-    <seed-footer footer-links='[[footerLinks]]'></seed-footer>
-
-  </template>
-  <script>
-    Polymer({
-      is: 'seed-app',
-
-      properties: {
-
-        routesActive: {
-          type: Boolean,
-          value: false
-        },
-
-        //Global application object
-        global: {
-          type: Object,
-          value: function() {
-            return {
-              version: '1.0',
-              name: 'Predix UI Seed',
-              session: {}
-            }
-          }
-        },
-
-        navItems: {
-          type: Array,
-          value: function() {
-<<<<<<< HEAD
-            return [{
-=======
-            return [
-            {
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-              "label": "Account",
-              "path": "/blankpage",
-              "icon": "fa-user"
-            }
-            ,{
-<<<<<<< HEAD
-              "label": "Contracts",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
-            }
-            ,{
-=======
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-              "label": "Exchange",
-              "path": "/tabledata",
-              "icon": "fa-exchange"
-            }
-            ,{
-<<<<<<< HEAD
-=======
-              "label": "Timeline",
-              "path": "/timeline",
-              "icon": "fa-clock-o"
-            }
-            ,{
-              "label": "Ledger",
-              "path": "/table",
-              "icon": "fa-list"
-            }
-            ,{
-              "label": "Contracts",
-              "path": "/blankpage2",
-              "icon": "fa-file-text-o"
-            }
-            ,{
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-              "label": "Transit",
-              "path": "/mapdata",
-              "icon": "fa-map"
-            }
-            ,{
-<<<<<<< HEAD
-              "label": "History",
-              "path": "/timeline",
-              "icon": "fa-list"
-=======
-              "label": "Windata",
-              "path": "/winddata",
-              "icon": "fa-line-chart"
->>>>>>> fdbbdbe42c18d71130d440226e7cb2c9010bf4c3
-            }
-            ]
-          }
-        },
-
-        footerLinks: {
-          type: Array,
-          value: function() {
-            return [{
-              "label": "Privacy",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Terms",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Contact",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Accessibility",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }, {
-              "label": "Cookies",
-              "href": "#/dashboards",
-              "target": "_blank"
-            }
-          ]
-          }
-        },
-
-        // Sets app default base URL for client-side routing
-        pathPrefix: {
-          type: String,
-          value: '#'
-        }
-      },
-
-      ready: function(){
-        this._checkForDefaultRoute();
-      },
-
-      _checkForDefaultRoute: function() {
-        // set default route to /dashboards
-        var l = window.location;
-        if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
-          l.hash = "/blankpage";
-        }
-      }
-
-    });
-  </script>
-</dom-module>
->>>>>>> f2e6a62c4a32b8a6c3c2b5ae196a014eb984409e

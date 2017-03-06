@@ -1,11 +1,11 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/px-table-view/px-table-view.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<!--<link rel="import" href="/bower_components/polymer/polymer.html">-->
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/px-card/px-card.html">
+<link rel="import" href="/bower_components/px-table-view/px-table-view.html">
 
 <dom-module id="table-card">
 
-  <template>
+    <template>
     <px-card header-text="[[_headerText]]">
 
       <iron-ajax
@@ -26,59 +26,63 @@
 </dom-module>
 
 <script>
-  Polymer({
-    is: 'table-card',
-    properties: {
-      elementData: {
-        type: Object,
-        value: function() {
-           return {
-              'empty': true 
-             }; 
-          }
-      },
-      _ajaxURL: {
-        type: String,
-        computed: '_computeAjaxURL(elementData)'
-      },
-      _ajaxData: {
-        type: Object
-      },
-      _dataTableData: {
-        type: Object,
-        computed: '_computeDataTableData(_ajaxData)'
-      },
-      _headerText: {
-        type: String,
-        computed: '_computeHeaderString(elementData)'
-      }
-    },
+    Polymer({
+        is: 'table-card',
+        properties: {
+            elementData: {
+                type: Object,
+                value: function() {
+                    return {
+                        'empty': true
+                    };
+                }
+            },
+            _ajaxURL: {
+                type: String,
+                computed: '_computeAjaxURL(elementData)'
+            },
+            _ajaxData: {
+                type: Object
+            },
+            _dataTableData: {
+                type: Object,
+                computed: '_computeDataTableData(_ajaxData)'
+            },
+            _headerText: {
+                type: String,
+                computed: '_computeHeaderString(elementData)'
+            }
+        },
 
-    _computeDataTableData: function(){
-      // return this._ajaxData['data'];
-      return this._ajaxData['data'];
-    },
+        _computeDataTableData: function() {
+            // return this._ajaxData['data'];
+            return this._ajaxData;
+        },
 
-    _dataValueExists: function(data, value) {
-      return (data !== { 'empty': true } &&
-              typeof data.attributes !== 'undefined' &&
-              typeof data.attributes[value] !== 'undefined')
-    },
+        _dataValueExists: function(data, value) {
+            return (data !== {
+                    'empty': true
+                } &&
+                typeof data.attributes !== 'undefined' &&
+                typeof data.attributes[value] !== 'undefined')
+        },
 
-    _computeAjaxURL: function() {
-      if (this._dataValueExists(this.elementData, 'dataUrl')){
-        return this.elementData.attributes.dataUrl;
-      }
-    },
+        _computeAjaxURL: function() {
+            if (this._dataValueExists(this.elementData, 'dataUrl')) {
+                return this.elementData.attributes.dataUrl;
+            } else {
+                return '/resources/transport_activity_sample.json';
+            }
+        },
 
-    _computeHeaderString: function() {
-      if (this._dataValueExists(this.elementData, 'headerText')){
-        return this.elementData.attributes.headerText;
-      } else {
-        return 'Ledger History'
-      }
-    }
+        _computeHeaderString: function() {
+            if (this._dataValueExists(this.elementData, 'headerText')) {
+                return this.elementData.attributes.headerText;
+            } else {
+                return 'Ledger Activity';
+            }
+        }
 
-  });
+    });
 </script>
 </dom-module>

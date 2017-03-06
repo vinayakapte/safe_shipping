@@ -1,7 +1,7 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/px-table-view/px-table-view.html">
+<!--<link rel="import" href="/bower_components/polymer/polymer.html">-->
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/px-card/px-card.html">
+<link rel="import" href="/bower_components/px-table-view/px-table-view.html">
 
 <dom-module id="table-card">
 
@@ -71,7 +71,7 @@
             if (this._dataValueExists(this.elementData, 'dataUrl')) {
                 return this.elementData.attributes.dataUrl;
             } else {
-                return '../resources/transport_activity_sample.json';
+                return '/resources/transport_activity_sample.json';
             }
         },
 

@@ -1,12 +1,12 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/px-vis-timeseries/px-vis-timeseries.html">
-<link rel="import" href="../../bower_components/px-rangepicker/px-rangepicker.html">
-<link rel="import" href="../../bower_components/px-vis/px-vis-data.html">
-<link rel="import" href="../../bower_components/px-vis/px-vis-data-converter.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/px-card/px-card.html">
+<link rel="import" href="/bower_components/px-vis-timeseries/px-vis-timeseries.html">
+<link rel="import" href="/bower_components/px-rangepicker/px-rangepicker.html">
+<link rel="import" href="/bower_components/px-vis/px-vis-data.html">
+<link rel="import" href="/bower_components/px-vis/px-vis-data-converter.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
 
-<script type="text/javascript" src="../../bower_components/px/dist/px.min.js"></script>
+<script type="text/javascript" src="/bower_components/px/dist/px.min.js"></script>
 
 <dom-module id="time-series-card">
   <template>
@@ -81,10 +81,10 @@
         request-data = '[{
           "type":"line",
           "name":"mySeries",
-            "url":"../../bower_components/px-demo-data/demo-data/aviation/delta-egt-cruise.json"
+            "url":"/bower_components/px-demo-data/demo-data/aviation/delta-egt-cruise.json"
           },{
             "type":"line",
-            "url":"../../bower_components/px-demo-data/demo-data/aviation/hpt-acc-position-cruise.json"
+            "url":"/bower_components/px-demo-data/demo-data/aviation/hpt-acc-position-cruise.json"
         }]'
         data-var="originalData"
         lists="append"
@@ -100,7 +100,7 @@
       <px-vis-data
         id = "eventAjax"
         request-data = '[{
-            "url":"../../bower_components/px-demo-data/demo-data/aviation/delta-egt-cruise-events.json"
+            "url":"/bower_components/px-demo-data/demo-data/aviation/delta-egt-cruise-events.json"
         }]'
         data-var="eventData"
         lists = "flat"

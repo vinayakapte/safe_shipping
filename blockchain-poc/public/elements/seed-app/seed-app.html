@@ -54,34 +54,34 @@
           <!-- /Account route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/blankpage"
-            active="{{_blankpageActive}}">
+            pattern="/account"
+            active="{{_accountActive}}">
           </app-route>
           <px-view
-            active="[[_blankpageActive]]"
-            element-href="/elements/views/blankpage-view.html">
+            active="[[_accountActive]]"
+            element-href="/elements/views/account-view.html">
           </px-view>
 
           <!-- /Exchange route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/tabledata"
-            active="{{_tabledataActive}}">
+            pattern="/exchange"
+            active="{{_exchangeActive}}">
           </app-route>
           <px-view
-            active="[[_tabledataActive]]"
-            element-href="/elements/views/tabledata-view.html">
+            active="[[_exchangeActive]]"
+            element-href="/elements/views/exchange-view.html">
           </px-view>
 
-          <!-- /Activity route and view -->
+           <!-- /Contract route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/mapdata"
-            active="{{_mapdataActive}}">
+            pattern="/contract"
+            active="{{_contractActive}}">
           </app-route>
           <px-view
-            active="[[_mapdataActive]]"
-            element-href="/elements/views/mapdata-view.html">
+            active="[[_contractActive]]"
+            element-href="/elements/views/contract-view.html">
           </px-view>
 
           <!-- /Timeline route and view -->
@@ -95,26 +95,26 @@
             element-href="/elements/views/timeline-view.html">
           </px-view>
 
-           <!-- /Contract route and view -->
+          <!-- /Transit Map route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/blankpage2"
-            active="{{_blankpage2Active}}">
+            pattern="/transit"
+            active="{{_transitActive}}">
           </app-route>
           <px-view
-            active="[[_blankpage2Active]]"
-            element-href="/elements/views/blankpage2-view.html">
+            active="[[_transitActive]]"
+            element-href="/elements/views/transit-view.html">
           </px-view>
 
-           <!-- /Histiry route and view -->
+           <!-- /History route and view -->
           <app-route
             route="[[_route]]"
-            pattern="/table"
-            active="{{_tableActive}}">
+            pattern="/history"
+            active="{{_historyActive}}">
           </app-route>
           <px-view
-            active="[[_tableActive]]"
-            element-href="/elements/views/table-view.html">
+            active="[[_historyActive]]"
+            element-href="/elements/views/history-view.html">
           </px-view>
 
          <!-- /dashboards route and view>
@@ -175,15 +175,15 @@
                     value: function() {
                         return [{
                             "label": "Account",
-                            "path": "/blankpage",
+                            "path": "/account",
                             "icon": "fa-users"
                         }, {
                             "label": "Exchange",
-                            "path": "/tabledata",
+                            "path": "/exchange",
                             "icon": "fa-exchange"
                         }, {
                             "label": "Contract",
-                            "path": "/blankpage2",
+                            "path": "/contract",
                             "icon": "fa-file-text-o"
                         }, {
                             "label": "Timeline",
@@ -191,11 +191,11 @@
                             "icon": "fa-clock-o"
                         }, {
                             "label": "Transit",
-                            "path": "/mapdata",
+                            "path": "/transit",
                             "icon": "fa-map"
                         }, {
                             "label": "History",
-                            "path": "/table",
+                            "path": "/history",
                             "icon": "fa-list"
                         }]
                     }

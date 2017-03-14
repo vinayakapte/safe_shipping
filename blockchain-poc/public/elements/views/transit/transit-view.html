@@ -1,0 +1,100 @@
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="/bower_components/px-card/px-card.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+<link rel="import" href="/bower_components/google-map/google-map-directions.html">
+<!--<link rel="import" href="/bower_components/google-map/google-map-marker.html">-->
+<!--<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">-->
+
+<dom-module id="transit-view">
+    <style>
+        px-card {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 65rem;
+            top: 0px;
+            margin-bottom: 6px;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+    <template>
+
+    <px-card class="layout layout__item-full"
+      header-text="Transit Activity">
+
+      <google-map map="{{map}}">
+      </google-map>
+
+      <google-map-directions
+        start-address="{{start}}"
+        end-address="{{end}}"
+        map="[[map]]"
+        travel-mode="{{travelMode}}"
+        waypoints="{{waypoints}}">
+      </google-map-directions>
+
+      <!--
+      <iron-ajax
+        auto
+        url=""
+        params='{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}'
+        handle-as="json"
+        last-response="{{handleIa1Response}}"
+        debounce-duration="300">
+      </iron-ajax>
+      -->
+
+      <!--
+      <template is="dom-repeat" items="{{response}}">
+        <div>
+          <a href="{{item.html_url}}">{{item.title}}</a>
+        </div>
+      </template> -->
+
+    </px-card>
+
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'transit-view',
+        properties: {
+            start: {
+                type: String,
+                value: 'San Fransisco, CA'
+            },
+            end: {
+                type: String,
+                value: 'New York, NY'
+            },
+            travelMode: {
+                type: String,
+                value: 'DRIVING'
+            },
+            waypoints: {
+                type: Array,
+                value: null
+            }
+        },
+        handleIa1Response: {
+
+        }
+    });
+
+    /*
+      *
+      * Waypoint sample array
+        [
+          {"location": "Orange County, CA"},
+          {"location": "Los Angeles, CA"},
+          {"location": "Valencia, CA"},
+          {"location": "Livermore, CA"},
+          {"location": "Dublin, CA"}
+        ]
+      *
+    */
+</script>
+</dom-module>

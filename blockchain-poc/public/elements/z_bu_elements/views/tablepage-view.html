@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="/bower_components/px-sample-cards/datagrid-card.html">
+<link rel="import" href="/bower_components/px-view-header/px-view-header.html">
+<dom-module id="tablepage-view">
+    <template>
+    <px-view-header title="Table Card" style="display: block; margin-bottom: 6px;"></px-view-header>
+    <datagrid-card id="myDataGrid">
+
+    </datagrid-card>
+  </template>
+    <script>
+        Polymer({
+            is: 'tablepage-view',
+            properties: {},
+            ready: function() {
+                console.log('tablepage-view ready()')
+            }
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="/bower_components/px-sample-cards/widget-to-widget-card.html">
+<link rel="import" href="/bower_components/px-view-header/px-view-header.html">
+<dom-module id="widget-view">
+    <template>
+
+    <px-view-header title="Widget-to-Widget Card" style="display: block; margin-bottom: 6px;"></px-view-header>
+
+    <widget-to-widget-card id="myCard">
+      This is a sample of a 'widget-to-widget-card' element {{id}} .
+    </widget-to-widget-card>
+
+  </template>
+    <script>
+        Polymer({
+            is: 'widget-view',
+            properties: {},
+            ready: function() {
+                console.log('widget-view ready()')
+            }
+        });
+    </script>
+</dom-module>

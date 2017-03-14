@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="/elements/three-widgets-card/three-widgets-card.html">
+<!--<link rel="import" href="/bower_components/px-view-header/px-view-header.html">-->
+
+<dom-module id="contract-view">
+    <template>
+
+    <three-widgets-card id="myCard">
+
+    </three-widgets-card>
+
+   </template>
+    <script>
+        Polymer({
+            is: 'contract-view',
+            properties: {
+                ready: function() {
+                    //console.log('blankpage-view ready()');
+                    getCurrentTime();
+                },
+                user: {
+                    type: Object,
+                    value: function() {
+                        return {
+                            name: 'Rob',
+                            manager: 'Paul'
+                        };
+                    }
+                },
+                clock: {
+                    type: Object,
+                    value: function getCurrentTime() {
+                        var n = new Date().toLocaleTimeString();
+                        return {
+                            time: n
+                        };
+                        //self.async(getCurrentTime(), null, 1000);
+                    },
+                }
+            },
+            changeManager: function() {
+                this.set('user.manager', 'Jimmy');
+            }
+        });
+    </script>
+</dom-module>

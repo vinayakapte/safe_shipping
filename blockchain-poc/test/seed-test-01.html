@@ -249,21 +249,21 @@
                  * Test cases for correct configuration of seed-app Polymer Object
                  */
 
-                test('There should contain a header which has a TCS logo element', function() {
-                    expect(Polymer.dom(testFixture.root).querySelector('header tcs-svg-logo')).not.to.equal(null);
+                test('There should contain a header which has a GE logo element', function() {
+                    expect(Polymer.dom(testFixture.root).querySelector('header ge-svg-logo')).not.to.equal(null);
                 });
 
                 test('There should contain a header which has the correct title', function() {
-                    expect(Polymer.dom(testFixture.root).querySelector('header h3').innerText).to.equal('SafeShipping');
+                    expect(Polymer.dom(testFixture.root).querySelector('header h3').innerText).to.equal(' SmartTransport');
                 });
 
                 test('There should be a view page for each menu item', function() {
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage-view.html"]')).not.to.equal(null);
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/tabledata-view.html"]')).not.to.equal(null);
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/mapdata-view.html"]')).not.to.equal(null);
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/timeline-view.html"]')).not.to.equal(null);
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/blankpage2-view.html"]')).not.to.equal(null);
-                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/table-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/account/account-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/contract/contract-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/exchange/exchange-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/history/history-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/timeline/timeline-view.html"]')).not.to.equal(null);
+                    expect(Polymer.dom(testFixture.root).querySelector('px-view[element-href="/elements/views/transit/transit-view.html"]')).not.to.equal(null);
                 });
 
             });
